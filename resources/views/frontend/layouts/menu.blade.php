@@ -1,160 +1,330 @@
-   <!-- Mobile Menu Bar Start -->
-   <div
-   class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-2 px-3 bg-white/10 mobile-menu-bar sm:px-6 backdrop-blur-md xl:hidden">
-   <div class="text-lg font-medium name">
-       <a class='flex items-center gap-2 text-black dark:text-white' href='index.html'>
-           <img src="{{ asset('assets/frontend/assets/img/site-logo.svg') }}" alt="Minfo">
-           <span>Ms-CoUpLe</span>
-       </a>
-   </div>
-   <!-- Mobile Hamburger Menu Start -->
-   <button
-       class="w-12 h-12 border rounded-full hamburger menu_toggle bg-white dark:bg-nightBlack border-platinum dark:border-greyBlack flex-center"
-       type="button" aria-label="Open Mobile Menu">
-       <svg viewBox="0 0 20 12" class="w-6" xmlns="http://www.w3.org/2000/svg">
-           <path fill-rule="evenodd" clip-rule="evenodd"
-               d="M5.33333 11.3333C5.33333 11.1565 5.40357 10.987 5.5286 10.8619C5.65362 10.7369 5.82319 10.6667 6 10.6667H19.3333C19.5101 10.6667 19.6797 10.7369 19.8047 10.8619C19.9298 10.987 20 11.1565 20 11.3333C20 11.5101 19.9298 11.6797 19.8047 11.8047C19.6797 11.9298 19.5101 12 19.3333 12H6C5.82319 12 5.65362 11.9298 5.5286 11.8047C5.40357 11.6797 5.33333 11.5101 5.33333 11.3333ZM2.66667 6C2.66667 5.82319 2.7369 5.65362 2.86193 5.5286C2.98695 5.40357 3.15652 5.33333 3.33333 5.33333H16.6667C16.8435 5.33333 17.013 5.40357 17.1381 5.5286C17.2631 5.65362 17.3333 5.82319 17.3333 6C17.3333 6.17681 17.2631 6.34638 17.1381 6.4714C17.013 6.59643 16.8435 6.66667 16.6667 6.66667H3.33333C3.15652 6.66667 2.98695 6.59643 2.86193 6.4714C2.7369 6.34638 2.66667 6.17681 2.66667 6ZM0 0.666667C0 0.489856 0.0702379 0.320287 0.195262 0.195262C0.320286 0.070238 0.489856 0 0.666667 0H14C14.1768 0 14.3464 0.070238 14.4714 0.195262C14.5964 0.320287 14.6667 0.489856 14.6667 0.666667C14.6667 0.843478 14.5964 1.01305 14.4714 1.13807C14.3464 1.2631 14.1768 1.33333 14 1.33333H0.666667C0.489856 1.33333 0.320286 1.2631 0.195262 1.13807C0.0702379 1.01305 0 0.843478 0 0.666667Z"
-               class="fill-theme dark:fill-white" />
-       </svg>
-   </button>
-   <!-- Mobile Hamburger Menu End -->
-</div>
-<!-- Mobile Menu Bar End -->
+    <!-- Header Section Start -->
+    <header class="header-section">
+        <div class="black-bg"></div>
+        <div class="red-bg"></div>
+        <div class="container-fluid">
+            <div class="main-header-wrapper">
+                <div class="logo-image">
+                    <a href="index.html">
+                        <img src="{{ asset('assets/frontend/assets/img/logo/logo.svg')}}" alt="img">
+                    </a>
+                </div>
+                <div class="main-header-items">
+                    <div class="header-top-wrapper">
+                        <span><i class="fa-regular fa-clock"></i> 09:00 am - 06:00 pm</span>
+                        <div class="social-icon d-flex align-items-center">
+                            <span>Follow Us:</span>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div id="header-sticky" class="header-1">
+                        <div class="mega-menu-wrapper">
+                            <div class="header-main">
+                                <div class="logo">
+                                    <a href="index.html" class="header-logo">
+                                        <img src="{{ asset('assets/frontend/assets/img/logo/logo.svg')}}" alt="logo-img">
+                                    </a>
+                                </div>
+                                <div class="header-left">
+                                    <div class="mean__menu-wrapper">
+                                        <div class="main-menu">
+                                            <nav id="mobile-menu">
+                                                <ul>
+                                                    <li class="has-dropdown active menu-thumb">
+                                                        <a href="index.html">
+                                                            Home
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu has-homemenu">
+                                                            <li>
+                                                                <div class="homemenu-items">
+                                                                    <div class="homemenu">
+                                                                        <div class="homemenu-thumb">
+                                                                            <img src="{{ asset('assets/frontend/assets/img/header/home1.jpg')}}"
+                                                                                alt="img">
+                                                                            <div class="demo-button">
+                                                                                <a href="index.html" class="theme-btn">
+                                                                                    Multi Page
+                                                                                </a>
+                                                                                <a href="index-one-page.html"
+                                                                                    class="theme-btn">
+                                                                                    One Page
+                                                                                </a>
+                                                                                <a href="index-dark.html"
+                                                                                    class="theme-btn">
+                                                                                    Dark Page
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-center homemenu-content">
+                                                                            <h4 class="homemenu-title">
+                                                                                Home 01
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <img src="{{ asset('assets/frontend/assets/img/header/home2.jpg')}}"
+                                                                                alt="img">
+                                                                            <div class="demo-button">
+                                                                                <a href="index-2.html"
+                                                                                    class="theme-btn">
+                                                                                    Multi Page
+                                                                                </a>
+                                                                                <a href="index-two-page.html"
+                                                                                    class="theme-btn">
+                                                                                    One Page
+                                                                                </a>
+                                                                                <a href="index-2-dark.html"
+                                                                                    class="theme-btn">
+                                                                                    Dark Page
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-center homemenu-content">
+                                                                            <h4 class="homemenu-title">
+                                                                                Home 02
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="homemenu">
+                                                                        <div class="homemenu-thumb mb-15">
+                                                                            <img src="{{ asset('assets/frontend/assets/img/header/home3.jpg')}}"
+                                                                                alt="img">
+                                                                            <div class="demo-button">
+                                                                                <a href="index-3.html"
+                                                                                    class="theme-btn">
+                                                                                    Multi Page
+                                                                                </a>
+                                                                                <a href="index-three-page.html"
+                                                                                    class="theme-btn">
+                                                                                    One Page
+                                                                                </a>
+                                                                                <a href="index-3-dark.html"
+                                                                                    class="theme-btn">
+                                                                                    Dark Page
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-center homemenu-content">
+                                                                            <h4 class="homemenu-title">
+                                                                                Home 03
+                                                                            </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-dropdown active d-xl-none">
+                                                        <a href="index.html" class="border-none">
+                                                            Home
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="index.html">Home 01</a></li>
+                                                            <li><a href="index-2.html">Home 02</a></li>
+                                                            <li><a href="index-3.html">Home 03</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-dropdown">
+                                                        <a href="about.html">
+                                                            About Us
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="about.html">About Us 01</a></li>
+                                                            <li><a href="about-2.html">About Us 02</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="shop.html">
+                                                            Shop
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="shop.html">Shop</a></li>
+                                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a>
+                                                            </li>
+                                                            <li><a href="shop-list.html">Shop List</a></li>
+                                                            <li><a href="shop-list-right-sidebar.html">Shop List Right
+                                                                    Sidebar</a></li>
+                                                            <li><a href="shop-details.html">Shop Details</a></li>
+                                                            <li><a href="cart.html">Cart List</a></li>
+                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="has-dropdown">
+                                                        <a href="#">
+                                                            Pages
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li class="has-dropdown">
+                                                                <a href="chef.html">
+                                                                    Chef
+                                                                    <i class="fas fa-angle-down"></i>
+                                                                </a>
+                                                                <ul class="submenu">
+                                                                    <li><a href="chef.html">Chef</a></li>
+                                                                    <li><a href="chef-details.html">Chef Details 01</a>
+                                                                    </li>
+                                                                    <li><a href="chef-details2.html">Chef Details 02</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="has-dropdown">
+                                                                <a href="menu.html">
+                                                                    Food Menu
+                                                                    <i class="fas fa-angle-down"></i>
+                                                                </a>
+                                                                <ul class="submenu">
+                                                                    <li><a href="menu.html">Food Menu 01</a></li>
+                                                                    <li><a href="menu2.html">Food Menu 02</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="gallery.html">Gallery</a></li>
+                                                            <li class="has-dropdown">
+                                                                <a href="services.html">
+                                                                    Services
+                                                                    <i class="fas fa-angle-down"></i>
+                                                                </a>
+                                                                <ul class="submenu">
+                                                                    <li><a href="services.html">Services</a> </li>
+                                                                    <li><a href="service-details.html">Service
+                                                                            Details</a></li>
+                                                                </ul>
+                                                            </li>
 
+                                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                                            <li><a href="reservation.html">Reservation</a></li>
+                                                            <li><a href="faq.html">Faq's</a></li>
+                                                            <li><a href="account.html">My Account</a></li>
+                                                            <li><a href="404.html">404 Page</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="blog.html">
+                                                            Blog
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="blog.html">Blog</a></li>
+                                                            <li><a href="blog-standard.html">Blog Standard</a></li>
+                                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a>
+                                                            </li>
+                                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="contact.html">
+                                                            Contact Us
+                                                            <i class="fa-regular fa-plus"></i>
+                                                        </a>
+                                                        <ul class="submenu">
+                                                            <li><a href="contact.html">Contact Us 01</a></li>
+                                                            <li><a href="contact2.html">Contact Us 02</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-right d-flex justify-content-end align-items-center">
+                                    <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
+                                    <div class="header__cart">
+                                        <a href="#"> <i class="fa-sharp fa-regular fa-cart-shopping"></i> </a>
+                                        <div class="header__right__dropdown__wrapper">
+                                            <div class="header__right__dropdown__inner">
+                                                <div class="single__header__right__dropdown">
 
-<!-- Mobile Menu Sidebar Start -->
-<div
-   class="mobile-menu fixed top-0 -right-full w-full max-w-mobilemenu bg-flashWhite dark:bg-nightBlack z-999 h-full xl:hidden transition-all duration-300 [&.is-menu-open]:right-0 py-12 px-8 overflow-y-scroll">
-   <button
-       class="absolute flex items-center justify-center w-9 h-9 text-sm text-white rounded-full close-menu top-4 right-4 bg-greyBlack"
-       aria-label="Close Menu">
-       <i class="fal fa-times"></i>
-   </button>
-   <div class="mb-6 text-lg font-medium text-black dark:text-white menu-title">
-       Menu
-   </div>
-   <ul class="space-y-5 font-normal main-menu">
-       <li data-scroll-nav="0" class="relative group active">
-           <a href="#home" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-home"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Home
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="1" class="relative group">
-           <a href="#about" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-user"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   About
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="2" class="relative group">
-           <a href="#" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-briefcase"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Service
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="3" class="relative group">
-           <a href="#skill" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-graduation-cap"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Skills
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="4" class="relative group">
-           <a href="#resume" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-file-alt"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Resume
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="5" class="relative group">
-           <a href="#portfolio" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-tasks-alt"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Poftfolio
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="6" class="relative group">
-           <a href="#blog" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-blog"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Blog
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="7" class="relative group">
-           <a href="#testimonial" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-comment-alt-lines"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Testimonial
-               </span>
-           </a>
-       </li>
-       <li data-scroll-nav="8" class="relative group">
-           <a href="#contact" class="flex items-center space-x-2 group">
-               <span class="w-5 text-black dark:text-white group-[&.active]:text-theme">
-                   <i class="fal fa-envelope"></i>
-               </span>
-               <span
-                   class="group-[&.active]:text-theme dark:group-[&.active]:text-white group-hover:text-theme transition-colors">
-                   Contact
-               </span>
-           </a>
-       </li>
-   </ul>
-   <br><br>
-   <div class="mb-4 font-medium text-black dark:text-white menu-title text-md">
-       Get in Touch
-   </div>
-   <!-- Social Share Icon Start  -->
-   <div class="flex items-center space-x-4 social-icons">
-       <a href="#" class="flex transition duration-200 hover:text-white"
-           title="Share with Facebook">
-           <i class="fab fa-facebook-f"></i>
-       </a>
-       <a href="#" class="flex transition duration-200 hover:text-white"
-           title="Share with Linkedin">
-           <i class="fab fa-linkedin-in"></i>
-       </a>
-       <a href="#" class="flex transition duration-200 hover:text-white" title="Share with X">
-           <i class="fab fa-twitter"></i>
-       </a>
-       <a href="#" class="flex transition duration-200 hover:text-white" title="Share with X">
-           <i class="fab fa-instagram"></i>
-       </a>
-   </div>
-   <!-- Social Share Icon End  -->
-</div>
-<!-- Mobile Menu Sidebar End -->
+                                                    <div class="header__right__dropdown__img">
+                                                        <a href="#">
+                                                            <img loading="lazy"
+                                                                src="{{ asset('assets/frontend/assets/img/blog/blogRecentThumb3_1.png')}}"
+                                                                alt="photo">
+                                                        </a>
+                                                    </div>
+                                                    <div class="header__right__dropdown__content">
+
+                                                        <a href="shop.html">Fried Chicken</a>
+                                                        <p>1 x <span class="price">$ 80.00</span></p>
+
+                                                    </div>
+                                                    <div class="header__right__dropdown__close">
+                                                        <a href="#"><i class="icofont-close-line"></i></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="single__header__right__dropdown">
+
+                                                    <div class="header__right__dropdown__img">
+                                                        <a href="#">
+                                                            <img loading="lazy"
+                                                                src="{{ asset('assets/frontend/assets/img/blog/blogRecentThumb3_2.png')}}"
+                                                                alt="photo">
+                                                        </a>
+                                                    </div>
+                                                    <div class="header__right__dropdown__content">
+
+                                                        <a href="shop.html">Fried Noodles</a>
+                                                        <p>1 x <span class="price">$ 60.00</span></p>
+
+                                                    </div>
+                                                    <div class="header__right__dropdown__close">
+                                                        <a href="#"><i class="icofont-close-line"></i></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="single__header__right__dropdown">
+
+                                                    <div class="header__right__dropdown__img">
+                                                        <a href="#">
+                                                            <img loading="lazy"
+                                                                src="{{ asset('assets/frontend')}}assets/img/blog/blogRecentThumb3_3.png"
+                                                                alt="photo">
+                                                        </a>
+                                                    </div>
+                                                    <div class="header__right__dropdown__content">
+
+                                                        <a href="shop.html">Special Pasta</a>
+                                                        <p>1 x <span class="price">$ 70.00</span></p>
+
+                                                    </div>
+                                                    <div class="header__right__dropdown__close">
+                                                        <a href="#"><i class="icofont-close-line"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="dropdown__price">Total: <span>$1,100.00</span>
+                                            </p>
+                                            <div class="header__right__dropdown__button">
+                                                <a href="cart.html" class="mb-2 theme-btn">View Cart</a>
+                                                <a href="checkout.html" class="theme-btn style3">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a class="theme-btn" href="menu.html">ORDER NOW <i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                    <div class="my-auto header__hamburger d-xl-block">
+                                        <div class="sidebar__toggle">
+                                            <i class="fas fa-bars"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

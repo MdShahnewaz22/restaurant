@@ -1,73 +1,219 @@
-<!-- Background Line and Animation -->
-<div
-class="bg-lines fixed inset-0 -z-1 md:max-xl:max-w-[45rem] xl:max-w-60rem 2xl:max-w-container mx-auto max-sm:px-8 sm:max-xl:px-12">
-<div class="line-wrapper max-w-[1130px] w-full h-full ml-auto 2xl:-mr-24 relative flex justify-between">
+ <!-- Footer Section    S T A R T -->
+ <footer class="footer-section bg-title fix" style="margin-top: -350px">
+    <div class="footer-widgets-wrapper">
+        <div class="shape1 float-bob-y d-none d-xxl-block"><img src="{{asset('assets/frontend/assets/img/shape/footerShape1_1.png')}}"
+                alt="shape"></div>
+        <div class="shape2 d-none d-xxl-block"><img src="{{asset('assets/frontend/assets/img/shape/footerShape1_2.png')}}" alt="shape"></div>
+        <div class="shape3 d-none d-xxl-block"><img src="{{asset('assets/frontend/assets/img/shape/footerShape1_3.png')}}" alt="shape"></div>
+        <div class="shape4 d-none d-xxl-block"><img src="{{asset('assets/frontend/assets/img/shape/footerShape1_4.png')}}" alt="shape"></div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <div class="fancy-box">
+                            <div class="item1"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="item2">
+                                <h6>address</h6>
+                                <p>4648 Rocky Road Philadelphia </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-start justify-content-lg-end">
+                        <div class="fancy-box">
+                            <div class="item1"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="item2">
+                                <h6>send email</h6>
+                                <p>info@exmple.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-start justify-content-lg-end">
+                        <div class="fancy-box">
+                            <div class="item1"><i class="fa-regular fa-phone-volume"></i></div>
+                            <div class="item2">
+                                <h6>call emergency</h6>
+                                <p>+88 0123 654 99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div
-        class="relative w-px h-full border-r border-dashed line line1 border-slate-300 dark:border-metalBlack before:absolute before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-top_bottom">
-    </div>
-
-    <div
-        class="relative w-px h-full border-r border-dashed line line2 border-slate-300 dark:border-metalBlack before:absolute before:bottom-0 before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-bottom_top before:animate-delay-3s">
-    </div>
-
-    <div
-        class="relative w-px h-full border-r border-dashed line line3 border-slate-300 dark:border-metalBlack before:absolute before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-top_bottom before:animate-delay-3s">
-    </div>
-
-    <div
-        class="relative w-px h-full border-r border-dashed line line4 border-slate-300 dark:border-metalBlack before:absolute before:bottom-0 before:w-2 before:h-2 before:bg-theme before:rotate-45 before:-left-1 before:animate-bottom_top before:animate-delay-2s">
-    </div>
-
-</div>
-</div>
-<!-- Ends Here -->
-
-<!-- Style Switcher Started -->
-<div
-class="style-switcher fixed right-0 top-1/2 -translate-y-1/2 translate-x-[15rem] w-[15rem] [&.active]:translate-x-0 transition z-[9999]">
-
-<div
-    class="toggle-btn absolute -left-15 w-15 h-15 bg-white dark:bg-nightBlack text-black dark:text-white flex-center cursor-pointer rounded-[.5rem_0_0_.5rem] select-none shadow-sm shadow-slate-400">
-    <span class="fal fa-cog fa-spin"></span>
-</div>
-
-<div
-    class="theme-select shadow-sm shadow-slate-400 px-6 py-4 bg-white dark:bg-nightBlack rounded-[0_0_0_.5rem]">
-    <h5 class="font-medium mb-2 !text-black dark:!text-white text-lg">Theme Mode</h5>
-
-    <div class="flex items-center justify-between gap-4">
-        <div class="switcher-input rounded-lg text-xl flex-[1] text-center transition cursor-pointer"
-            data-theme="dark">
-            <button
-                class="border w-full px-4 py-4 flex flex-col gap-1 justify-center items-center [&.active]:bg-flashWhite [&.active]:text-black dark:text-white rounded-md"
-                id="dark_theme" title="Active Dark Theme">
-                <i class="fal fa-moon"></i>
-            </button>
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <a href="index.html">
+                                <img src="{{asset('assets/frontend/assets/img/logo/logoWhite.svg')}}" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p>
+                                Phasellus ultricies aliquam volutpat ullamcorper laoreet neque, a lacinia
+                                curabitur
+                                lacinia mollis
+                            </p>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 ps-xl-5 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <h3>Quick Links</h3>
+                        </div>
+                        <ul class="list-area">
+                            <li>
+                                <a href="about.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="gallery.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Our Gallery
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blog.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Our Blogs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="faq.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    FAQ’S
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 ps-xl-5 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <h3>Our Menu</h3>
+                        </div>
+                        <ul class="list-area">
+                            <li>
+                                <a href="menu.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Burger King
+                                </a>
+                            </li>
+                            <li>
+                                <a href="menu.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Pizza king
+                                </a>
+                            </li>
+                            <li>
+                                <a href="menu.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Fresh Food
+                                </a>
+                            </li>
+                            <li>
+                                <a href="menu.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Vegetable
+                                </a>
+                            </li>
+                            <li>
+                                <a href="menu.html">
+                                    <i class="fa-solid fa-chevrons-right"></i>
+                                    Desserts
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 ps-xl-5 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <h3>Contact Us</h3>
+                        </div>
+                        <ul class="list-area">
+                            <li class="mb-2">
+                                Monday – Friday: <span class="text-theme-color2"> 8am – 4pm </span>
+                            </li>
+                            <li>
+                                Saturday: <span class="text-theme-color2"> 8am – 12am </span>
+                            </li>
+                        </ul>
+                        <form action="#" class="mt-4">
+                            <div class="form-control">
+                                <input class="email" type="email" placeholder="Your email address">
+                                <button type="submit" class="submit-btn"><i
+                                        class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
+                            <div class="mt-3 form-control style2">
+                                <input id="checkbox" name="checkbox" type="checkbox">
+                                <label for="checkbox">I agree to the <a href="contact.html">Privacy Policy.
+                                    </a></label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="switcher-input rounded-lg text-lg flex-[1] text-center transition cursor-pointer"
-            data-theme="light">
-            <button
-                class="border w-full px-4 py-4 flex flex-col gap-1 justify-center items-center [&.active]:bg-flashWhite [&.active]:text-black dark:text-white rounded-md"
-                id="light_theme" title="Active Light Theme">
-                <i class="fal fa-sun"></i>
-            </button>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-wrapper d-flex align-items-center justify-content-between">
+                <p class="wow fadeInLeft" data-wow-delay=".3s">
+                    © All Copyright 2024 by <a href="index.html">mdshahnewazs77@gmail.com</a>
+                </p>
+                <ul class="brand-logo wow fadeInRight" data-wow-delay=".5s">
+                    <li>
+                        <a class="text-white" href="contact.html">
+                            Terms & Condition
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-white" href="contact.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+</footer>
 
-</div>
-<!-- Style Switcher End -->
-
-<!-- Js Library Start -->
-<script src="{{ asset('assets/frontend/assets/js/jquery-3.6.0.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/waypoints.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/tw-elements.umd.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/cd-headline.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/scrollIt.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/script.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/circle-progress.min.js') }}"></script>
-<script src="{{ asset('assets/frontend/assets/js/theme-mode.js')}}"></script>
-<!-- Js Library End -->
+<!--<< All JS Plugins >>-->
+<script src="{{ asset('assets/frontend/assets/js/jquery-3.7.1.min.js')}}"></script>
+<!--<< Bootstrap Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
+<!--<< Waypoints Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/jquery.waypoints.js')}}"></script>
+<!--<< Counterup Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/jquery.counterup.min.js')}}"></script>
+<!--<< Viewport Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/viewport.jquery.js')}}"></script>
+<!--<< Magnific popup Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/magnific-popup.min.js')}}"></script>
+<!--<< Tilt Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/tilt.min.js')}}"></script>
+<!--<< Swiper Slider Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/swiper-bundle.min.js')}}"></script>
+<!--<< MeanMenu Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/jquery.meanmenu.min.js')}}"></script>
+<!--<< Wow Animation Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/wow.min.js')}}"></script>
+<!--<< Nice Select Js >>-->
+<script src="{{ asset('assets/frontend/assets/js/nice-select.min.js')}}"></script>
+<!--<< Main.js >>-->
+<script src="{{ asset('assets/frontend/assets/js/main.js')}}"></script>

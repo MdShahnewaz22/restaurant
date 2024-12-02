@@ -3,3 +3,5 @@
 @yield('main-content')
 
 @include('frontend.layouts.footer')
+
+
