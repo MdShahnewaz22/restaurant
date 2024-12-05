@@ -1,5 +1,6 @@
  <!-- Footer Section    S T A R T -->
- <footer class="footer-section bg-title fix" style="margin-top: -350px">
+ {{-- style="margin-top: -350px" --}}
+ <footer class="footer-section bg-title fix">
     <div class="footer-widgets-wrapper">
         <div class="shape1 float-bob-y d-none d-xxl-block"><img src="{{asset('assets/frontend/assets/img/shape/footerShape1_1.png')}}"
                 alt="shape"></div>

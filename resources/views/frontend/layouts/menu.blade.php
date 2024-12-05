@@ -1,5 +1,5 @@
     <!-- Header Section Start -->
-    <header class="header-section">
+    <header id="header-section"class="header-section">
         <div class="black-bg"></div>
         <div class="red-bg"></div>
         <div class="container-fluid">
@@ -34,7 +34,7 @@
                                             <nav id="mobile-menu">
                                                 <ul>
                                                     <li class="has-dropdown active menu-thumb">
-                                                        <a href="index.html">
+                                                        <a href="{{route('frontend.home')}}">
                                                             Home
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
@@ -136,26 +136,26 @@
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
-                                                            <li><a href="about.html">About Us 01</a></li>
-                                                            <li><a href="about-2.html">About Us 02</a>
+                                                            <li><a href="{{route('frontend.aboutUs1')}}">About Us 01</a></li>
+                                                            <li><a href="{{route('frontend.aboutUs2')}}">About Us 02</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="shop.html">
+                                                        <a href="{{route('frontend.shop')}}">
                                                             Shop
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
-                                                            <li><a href="shop.html">Shop</a></li>
+                                                            <li><a href="{{route('frontend.shop')}}">Shop</a></li>
                                                             <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a>
                                                             </li>
                                                             <li><a href="shop-list.html">Shop List</a></li>
                                                             <li><a href="shop-list-right-sidebar.html">Shop List Right
                                                                     Sidebar</a></li>
-                                                            <li><a href="shop-details.html">Shop Details</a></li>
-                                                            <li><a href="cart.html">Cart List</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
+                                                            <li><a href="{{route('frontend.shop_details')}}">Shop Details</a></li>
+                                                            <li><a href="{{route('frontend.cart')}}">Cart List</a></li>
+                                                            <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
                                                             <li><a href="wishlist.html">Wishlist</a></li>
                                                         </ul>
                                                     </li>

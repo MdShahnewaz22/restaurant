@@ -29,3 +29,10 @@ Route::get('/cache-clear', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/about-us1', [HomeController::class, 'aboutUs1'])->name('aboutUs1');
+Route::get('/about-us2', [HomeController::class, 'aboutUs2'])->name('aboutUs2');
+Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
+Route::get('/shop_details', [HomeController::class, 'shop_details'])->name('shop_details');
+Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
+Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
