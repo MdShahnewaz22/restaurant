@@ -148,15 +148,15 @@
                                                         </a>
                                                         <ul class="submenu">
                                                             <li><a href="{{route('frontend.shop')}}">Shop</a></li>
-                                                            <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a>
+                                                            <li><a href="{{route('frontend.shop_right_sidebar')}}">Shop Right Sidebar</a>
                                                             </li>
-                                                            <li><a href="shop-list.html">Shop List</a></li>
-                                                            <li><a href="shop-list-right-sidebar.html">Shop List Right
+                                                            <li><a href="{{route('frontend.shop_list')}}">Shop List</a></li>
+                                                            <li><a href="{{route('frontend.shop_list_right_sidebar')}}">Shop List Right
                                                                     Sidebar</a></li>
                                                             <li><a href="{{route('frontend.shop_details')}}">Shop Details</a></li>
                                                             <li><a href="{{route('frontend.cart')}}">Cart List</a></li>
                                                             <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
-                                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                                            <li><a href="{{route('frontend.wishlist')}}">Wishlist</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="has-dropdown">
@@ -166,12 +166,12 @@
                                                         </a>
                                                         <ul class="submenu">
                                                             <li class="has-dropdown">
-                                                                <a href="chef.html">
+                                                                <a href="{{route('frontend.chef')}}">
                                                                     Chef
                                                                     <i class="fas fa-angle-down"></i>
                                                                 </a>
                                                                 <ul class="submenu">
-                                                                    <li><a href="chef.html">Chef</a></li>
+                                                                    <li><a href="{{route('frontend.chef')}}">Chef</a></li>
                                                                     <li><a href="chef-details.html">Chef Details 01</a>
                                                                     </li>
                                                                     <li><a href="chef-details2.html">Chef Details 02</a>
@@ -189,14 +189,14 @@
                                                                     </li>
                                                                 </ul>
                                                             </li>
-                                                            <li><a href="gallery.html">Gallery</a></li>
+                                                            <li><a href="{{route('frontend.gallery')}}">Gallery</a></li>
                                                             <li class="has-dropdown">
-                                                                <a href="services.html">
+                                                                <a href="{{route('frontend.services')}}">
                                                                     Services
                                                                     <i class="fas fa-angle-down"></i>
                                                                 </a>
                                                                 <ul class="submenu">
-                                                                    <li><a href="services.html">Services</a> </li>
+                                                                    <li><a href="{{route('frontend.services')}}">Services</a> </li>
                                                                     <li><a href="service-details.html">Service
                                                                             Details</a></li>
                                                                 </ul>
@@ -204,22 +204,22 @@
 
                                                             <li><a href="testimonials.html">Testimonials</a></li>
                                                             <li><a href="reservation.html">Reservation</a></li>
-                                                            <li><a href="faq.html">Faq's</a></li>
+                                                            <li><a href="{{route('frontend.faq')}}">Faq's</a></li>
                                                             <li><a href="account.html">My Account</a></li>
                                                             <li><a href="404.html">404 Page</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="blog.html">
+                                                        <a href="{{route('frontend.blog')}}">
                                                             Blog
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
-                                                            <li><a href="blog.html">Blog</a></li>
-                                                            <li><a href="blog-standard.html">Blog Standard</a></li>
-                                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a>
+                                                            <li><a href="{{route('frontend.blog')}}">Blog</a></li>
+                                                            <li><a href="{{route('frontend.blog_standard')}}">Blog Standard</a></li>
+                                                            <li><a href="{{route('frontend.blog_left_sidebar')}}">Blog Left Sidebar</a>
                                                             </li>
-                                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                                            <li><a href="{{route('frontend.blog_details')}}">Blog Details</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
@@ -228,8 +228,8 @@
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
-                                                            <li><a href="contact.html">Contact Us 01</a></li>
-                                                            <li><a href="contact2.html">Contact Us 02</a></li>
+                                                            <li><a href="{{route('frontend.contact')}}">Contact Us 01</a></li>
+                                                            <li><a href="{{route('frontend.contact2')}}">Contact Us 02</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
