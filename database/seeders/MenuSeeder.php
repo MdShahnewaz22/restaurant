@@ -154,7 +154,7 @@ class MenuSeeder extends Seeder
             ],
 
 
-            
+
     [
         "name" => "Contact Manage",
         "icon" => "aperture",
@@ -177,6 +177,36 @@ class MenuSeeder extends Seeder
                 "name" => "Contact List",
                 "icon" => "list",
                 "route" => "backend.contact.index",
+                "description" => null,
+                "sorting" => 1,
+                "permission_name" => "role-list",
+                "status" => "Active",
+            ],
+        ],
+    ],
+
+    [
+        "name" => "Popular Food Manage",
+        "icon" => "aperture",
+        "route" => null,
+        "description" => null,
+        "sorting" => 1,
+        "permission_name" => "popular-food-management",
+        "status" => "Active",
+        "children" => [
+            [
+                "name" => "Popular Food Add",
+                "icon" => "plus-circle",
+                "route" => "backend.popularfood.create",
+                "description" => null,
+                "sorting" => 1,
+                "permission_name" => "role-add",
+                "status" => "Active",
+            ],
+            [
+                "name" => "Popular Food List",
+                "icon" => "list",
+                "route" => "backend.popularfood.index",
                 "description" => null,
                 "sorting" => 1,
                 "permission_name" => "role-list",

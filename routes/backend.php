@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Backend\ContactController;
+use App\Http\Controllers\Backend\PopularFoodController;
 //don't remove this comment from route namespace
 
 /*
@@ -64,6 +65,10 @@ Route::group(['middleware' => 'AdminAuth'], function () {
 	// for Contact
 	Route::resource('contact', ContactController::class);
 	Route::get('contact/{id}/status/{status}/change', [ContactController::class, 'changeStatus'])->name('contact.status.change');
+
+    // for Popular Food
+	Route::resource('popularfood', PopularFoodController::class);
+	Route::get('popularfood/{id}/status/{status}/change', [PopularFoodController::class, 'changeStatus'])->name('popularfood.status.change');
 
 	//don't remove this comment from route body
 });
