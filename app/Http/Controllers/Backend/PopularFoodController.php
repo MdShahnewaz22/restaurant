@@ -69,7 +69,7 @@
         $query = $this->popularfoodService->list();
 
         if(request()->filled('name'))
-				$query->where('name', 'like', request()->name .'%');
+				$query->where('name', 'like','%'. request()->name .'%');
 
 			if(request()->filled('description'))
 				$query->where('description', 'like', request()->description .'%');

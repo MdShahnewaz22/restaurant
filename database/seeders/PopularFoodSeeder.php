@@ -24,6 +24,14 @@ class PopularFoodSeeder extends Seeder
     {
         return [
             // dummy data array will be here
+            [
+                'image' =>'popular_foods/image.jpg',
+                'name' =>'Food',
+                'description'=>'Very Good Food',
+                'price'=>'120',
+
+            
+            ],
         ];
     }
 }

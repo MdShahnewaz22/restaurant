@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             CompanySeeder::class,
 
             AdminSeeder::class,
+            PopularFoodSeeder::class,
           
         ]);
     }
