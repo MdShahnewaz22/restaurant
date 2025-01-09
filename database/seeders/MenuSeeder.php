@@ -215,6 +215,36 @@ class MenuSeeder extends Seeder
         ],
     ],
 
+    [
+        "name" => "Chef Manage",
+        "icon" => "aperture",
+        "route" => null,
+        "description" => null,
+        "sorting" => 1,
+        "permission_name" => "Chef-management",
+        "status" => "Active",
+        "children" => [
+            [
+                "name" => "Chef Add",
+                "icon" => "plus-circle",
+                "route" => "backend.chef.create",
+                "description" => null,
+                "sorting" => 1,
+                "permission_name" => "role-add",
+                "status" => "Active",
+            ],
+            [
+                "name" => "Chef List",
+                "icon" => "list",
+                "route" => "backend.chef.index",
+                "description" => null,
+                "sorting" => 1,
+                "permission_name" => "role-list",
+                "status" => "Active",
+            ],
+        ],
+    ],
+
     //don't remove this comment from menu seeder
         ];
     }

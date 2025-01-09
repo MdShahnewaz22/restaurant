@@ -8,17 +8,16 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 import AlertMessage from "@/Components/AlertMessage.vue";
 import { displayResponse, displayWarning } from "@/responseMessage.js";
 
-const props = defineProps(["popularfood", "id"]);
+const props = defineProps(["chef", "id"]);
 
 const form = useForm({
-    image: props.popularfood?.image ?? "",
-    name: props.popularfood?.name ?? "",
-    description: props.popularfood?.description ?? "",
-    price: props.popularfood?.price ?? "",
+    image: props.chef?.image ?? "",
+    name: props.chef?.name ?? "",
+    designation: props.chef?.designation ?? "",
 
-    imagePreview: props.popularfood?.image ?? "",
-    filePreview: props.popularfood?.file ?? "",
-    _method: props.popularfood?.id ? "put" : "post",
+    imagePreview: props.chef?.image ?? "",
+    filePreview: props.chef?.file ?? "",
+    _method: props.chef?.id ? "put" : "post",
 });
 
 const handleimage = (event) => {
@@ -40,8 +39,8 @@ const handlefileChange = (event) => {
 
 const submit = () => {
     const routeName = props.id
-        ? route("backend.popularfood.update", props.id)
-        : route("backend.popularfood.store");
+        ? route("backend.chef.update", props.id)
+        : route("backend.chef.store");
     form.transform((data) => ({
         ...data,
         remember: "",
@@ -79,7 +78,8 @@ const submit = () => {
                 <div
                     class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4"
                 >
-                    <div class="col-span-1 md:col-span-2">
+
+                <div class="col-span-1 md:col-span-2">
                         <InputLabel for="image" value="Image" />
                         <div v-if="form.imagePreview">
                             <img
@@ -111,29 +111,15 @@ const submit = () => {
                         <InputError class="mt-2" :message="form.errors.name" />
                     </div>
                     <div class="col-span-1 md:col-span-2">
-                        <InputLabel for="description" value="Description" />
+                        <InputLabel for="designation" value="Designation" />
                         <input
-                            id="description"
+                            id="designation"
                             class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
-                            v-model="form.description"
+                            v-model="form.designation"
                             type="text"
-                            placeholder="Description"
+                            placeholder="Designation"
                         />
-                        <InputError
-                            class="mt-2"
-                            :message="form.errors.description"
-                        />
-                    </div>
-                    <div class="col-span-1 md:col-span-2">
-                        <InputLabel for="price" value="Price" />
-                        <input
-                            id="price"
-                            class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
-                            v-model="form.price"
-                            type="text"
-                            placeholder="Price"
-                        />
-                        <InputError class="mt-2" :message="form.errors.price" />
+                        <InputError class="mt-2" :message="form.errors.designation" />
                     </div>
                 </div>
                 <div class="flex items-center justify-end mt-4">

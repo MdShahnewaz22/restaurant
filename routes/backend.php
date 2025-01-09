@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\PopularFoodController;
+use App\Http\Controllers\Backend\ChefController;
 //don't remove this comment from route namespace
 
 /*
@@ -69,6 +70,11 @@ Route::group(['middleware' => 'AdminAuth'], function () {
     // for Popular Food
 	Route::resource('popularfood', PopularFoodController::class);
 	Route::get('popularfood/{id}/status/{status}/change', [PopularFoodController::class, 'changeStatus'])->name('popularfood.status.change');
+
+
+    // for Chef
+	Route::resource('chef', ChefController::class);
+	Route::get('chef/{id}/status/{status}/change', [ChefController::class, 'changeStatus'])->name('chef.status.change');
 
 	//don't remove this comment from route body
 });

@@ -2,9 +2,9 @@
     namespace App\Http\Controllers\Backend;
 
     use App\Http\Controllers\Controller;
-    use App\Http\Requests\PopularFoodRequest;
+    use App\Http\Requests\ChefRequest;
     use Illuminate\Support\Facades\DB;
-    use App\Services\PopularFoodService;
+    use App\Services\ChefService;
     use Illuminate\Http\Request;
     use Illuminate\Support\Str;
     use Illuminate\Support\Facades\Schema;
@@ -12,26 +12,26 @@
     use App\Traits\SystemTrait;
     use Exception;
 
-    class PopularFoodController extends Controller
+    class ChefController extends Controller
     {
         use SystemTrait;
 
-        protected $popularfoodService;
+        protected $chefService;
 
-        public function __construct(PopularFoodService $popularfoodService)
+        public function __construct(ChefService $chefService)
         {
-            $this->popularfoodService = $popularfoodService;
+            $this->chefService = $chefService;
         }
 
         public function index()
         {
             return Inertia::render(
-                'Backend/PopularFood/Index',
+                'Backend/Chef/Index',
                 [
-                    'pageTitle' => fn () => 'Popular Food List',
+                    'pageTitle' => fn () => 'Chef List',
                     'breadcrumbs' => fn () => [
-                        ['link' => null, 'title' => 'Popular Food Manage'],
-                        ['link' => route('backend.popularfood.index'), 'title' => 'Popular Food List'],
+                        ['link' => null, 'title' => 'Chef Manage'],
+                        ['link' => route('backend.chef.index'), 'title' => 'Chef List'],
                     ],
                     'tableHeaders' => fn () => $this->getTableHeaders(),
                     'dataFields' => fn () => $this->getDataFields(),
@@ -46,8 +46,7 @@
             ['fieldName' => 'index', 'class' => 'text-center'],
             ['fieldName' => 'image', 'class' => 'text-center'],
             ['fieldName' => 'name', 'class' => 'text-center'],
-			['fieldName' => 'description', 'class' => 'text-center'],
-			['fieldName' => 'price', 'class' => 'text-center'],
+			['fieldName' => 'designation', 'class' => 'text-center'],
             ['fieldName' => 'status', 'class' => 'text-center'],
         ];
     }
@@ -56,9 +55,8 @@
         return [
             'Sl/No',
             'Image',
-            'Name',
-			'Description',
-			'Price',
+            'Chef Name',
+			'Designation',
             'Status',
             'Action'
         ];
@@ -66,16 +64,14 @@
 
     private function getDatas()
     {
-        $query = $this->popularfoodService->list();
+        $query = $this->chefService->list();
 
         if(request()->filled('name'))
 				$query->where('name', 'like', request()->name .'%');
 
-			if(request()->filled('description'))
-				$query->where('description', 'like', request()->description .'%');
+			if(request()->filled('designation'))
+				$query->where('designation', 'like', request()->designation .'%');
 
-			if(request()->filled('price'))
-				$query->where('price', 'like', request()->price .'%');
 
         $datas = $query->paginate(request()->numOfData ?? 10)->withQueryString();
 
@@ -85,8 +81,7 @@
 
             $customData->image = '<img src="' . $data->image . '" height="60" width="70"/>';
             $customData->name = $data->name;
-			$customData->description = $data->description;
-			$customData->price = $data->price;
+			$customData->designation = $data->designation;
 
 
             $customData->status = getStatusText($data->status);
@@ -95,18 +90,18 @@
 
                   [
                     'linkClass' => 'semi-bold text-white statusChange ' . (($data->status == 'Active') ? "bg-gray-500" : "bg-green-500"),
-                    'link' => route('backend.popularfood.status.change', ['id' => $data->id, 'status' => $data->status == 'Active' ? 'Inactive' : 'Active']),
+                    'link' => route('backend.chef.status.change', ['id' => $data->id, 'status' => $data->status == 'Active' ? 'Inactive' : 'Active']),
                     'linkLabel' => getLinkLabel((($data->status == 'Active') ? "Inactive" : "Active"), null, null)
                 ],
 
                 [
                     'linkClass' => 'bg-yellow-400 text-black semi-bold',
-                    'link' => route('backend.popularfood.edit', $data->id),
+                    'link' => route('backend.chef.edit', $data->id),
                     'linkLabel' => getLinkLabel('Edit', null, null)
                 ],
                 [
                     'linkClass' => 'deleteButton bg-red-500 text-white semi-bold',
-                    'link' => route('backend.popularfood.destroy', $data->id),
+                    'link' => route('backend.chef.destroy', $data->id),
                     'linkLabel' => getLinkLabel('Delete', null, null)
                 ]
             ];
@@ -119,35 +114,35 @@
         public function create()
         {
             return Inertia::render(
-                'Backend/PopularFood/Form',
+                'Backend/Chef/Form',
                 [
-                    'pageTitle' => fn () => 'Popular Food Create',
+                    'pageTitle' => fn () => 'Chef Create',
                     'breadcrumbs' => fn () => [
-                        ['link' => null, 'title' => 'Popular Food Manage'],
-                        ['link' => route('backend.popularfood.create'), 'title' => 'Popular Food Create'],
+                        ['link' => null, 'title' => 'Chef Manage'],
+                        ['link' => route('backend.chef.create'), 'title' => 'Chef Create'],
                     ],
                 ]
             );
         }
 
 
-        public function store(PopularFoodRequest $request)
+        public function store(ChefRequest $request)
         {
 
             DB::beginTransaction();
             try {
 
                 $data = $request->validated();
-
                 if ($request->hasFile('image')) {
-                    $data['image'] = $this->imageUpload($request->file('image'), 'popular_foods');
+                    $data['image'] = $this->imageUpload($request->file('image'), 'chefs');
                 }
 
-                $dataInfo = $this->popularfoodService->create($data);
+
+                $dataInfo = $this->chefService->create($data);
 
                 if ($dataInfo) {
-                    $message = 'Popular Food created successfully';
-                    $this->storeAdminWorkLog($dataInfo->id, 'popular_foods', $message);
+                    $message = 'Chef created successfully';
+                    $this->storeAdminWorkLog($dataInfo->id, 'chefs', $message);
 
                     DB::commit();
 
@@ -157,7 +152,7 @@
                 } else {
                     DB::rollBack();
 
-                    $message = "Failed To create Popular Food.";
+                    $message = "Failed To create Chef.";
                     return redirect()
                         ->back()
                         ->with('errorMessage', $message);
@@ -165,7 +160,7 @@
             } catch (Exception $err) {
 
                 DB::rollBack();
-                $this->storeSystemError('Backend', 'PopularFoodController', 'store', substr($err->getMessage(), 0, 1000));
+                $this->storeSystemError('Backend', 'ChefController', 'store', substr($err->getMessage(), 0, 1000));
 
                 DB::commit();
                 $message = "Server Errors Occur. Please Try Again.";
@@ -176,42 +171,53 @@
             }
         }
 
+        // private function handleImageUpload($image, $currentPhotoPath, $directory)
+        // {
+        //     $newPhotoPath = $this->imageUpload($image, $directory);
+        //     if ($currentPhotoPath) {
+        //         $path = storage_path('app/public/' . $currentPhotoPath);
+        //         if (file_exists($path)) {
+        //             unlink($path);
+        //         }
+        //     }
+        //     return $newPhotoPath;
+        // }
+
         public function edit($id)
         {
-            $popularfood = $this->popularfoodService->find($id);
+            $chef = $this->chefService->find($id);
 
             return Inertia::render(
-                'Backend/PopularFood/Form',
+                'Backend/Chef/Form',
                 [
-                    'pageTitle' => fn () => 'Popular Food Edit',
+                    'pageTitle' => fn () => 'Chef Edit',
                     'breadcrumbs' => fn () => [
-                        ['link' => null, 'title' => 'Popular Food Manage'],
-                        ['link' => route('backend.popularfood.edit', $id), 'title' => 'Popular Food Edit'],
+                        ['link' => null, 'title' => 'Chef Manage'],
+                        ['link' => route('backend.chef.edit', $id), 'title' => 'Chef Edit'],
                     ],
-                    'popularfood' => fn () => $popularfood,
+                    'chef' => fn () => $chef,
                     'id' => fn () => $id,
                 ]
             );
         }
 
-        public function update(PopularFoodRequest $request, $id)
+        public function update(ChefRequest $request, $id)
         {
             DB::beginTransaction();
             try {
 
                 $data = $request->validated();
                 if ($request->hasFile('image')) {
-                    $data['image'] = $this->imageUpload($request->file('image'), 'popular_foods');
+                    $data['image'] = $this->imageUpload($request->file('image'), 'chefs');
                 }
+                $Chef = $this->chefService->find($id);
 
-                $PopularFood = $this->popularfoodService->find($id);
 
-
-                $dataInfo = $this->popularfoodService->update($data, $id);
+                $dataInfo = $this->chefService->update($data, $id);
 
                 if ($dataInfo->save()) {
-                    $message = 'Popular Food updated successfully';
-                    $this->storeAdminWorkLog($dataInfo->id, 'popular_foods', $message);
+                    $message = 'Chef updated successfully';
+                    $this->storeAdminWorkLog($dataInfo->id, 'chefs', $message);
 
                     DB::commit();
 
@@ -221,33 +227,20 @@
                 } else {
                     DB::rollBack();
 
-                    $message = "Failed To update Popular Food.";
+                    $message = "Failed To update Chef.";
                     return redirect()
                         ->back()
                         ->with('errorMessage', $message);
                 }
             } catch (Exception $err) {
                 DB::rollBack();
-                $this->storeSystemError('Backend', 'PopularFoodController', 'update', substr($err->getMessage(), 0, 1000));
+                $this->storeSystemError('Backend', 'Chefcontroller', 'update', substr($err->getMessage(), 0, 1000));
                 DB::commit();
                 $message = "Server Errors Occur. Please Try Again.";
                 return redirect()
                     ->back()
                     ->with('errorMessage', $message);
             }
-        }
-
-
-        private function handleImageUpload($image, $currentPhotoPath, $directory)
-        {
-            $newPhotoPath = $this->imageUpload($image, $directory);
-            if ($currentPhotoPath) {
-                $path = storage_path('app/public/' . $currentPhotoPath);
-                if (file_exists($path)) {
-                    unlink($path);
-                }
-            }
-            return $newPhotoPath;
         }
 
         public function destroy($id)
@@ -257,9 +250,9 @@
 
             try {
 
-                if ($this->popularfoodService->delete($id)) {
-                    $message = 'Popular Food deleted successfully';
-                    $this->storeAdminWorkLog($id, 'popular_foods', $message);
+                if ($this->chefService->delete($id)) {
+                    $message = 'Chef deleted successfully';
+                    $this->storeAdminWorkLog($id, 'chefs', $message);
 
                     DB::commit();
 
@@ -269,14 +262,14 @@
                 } else {
                     DB::rollBack();
 
-                    $message = "Failed To Delete Popular Food.";
+                    $message = "Failed To Delete Chef.";
                     return redirect()
                         ->back()
                         ->with('errorMessage', $message);
                 }
             } catch (Exception $err) {
                 DB::rollBack();
-                $this->storeSystemError('Backend', 'PopularFoodController', 'destroy', substr($err->getMessage(), 0, 1000));
+                $this->storeSystemError('Backend', 'Chefcontroller', 'destroy', substr($err->getMessage(), 0, 1000));
                 DB::commit();
                 $message = "Server Errors Occur. Please Try Again.";
                 return redirect()
@@ -290,11 +283,11 @@
         DB::beginTransaction();
 
         try {
-            $dataInfo = $this->popularfoodService->changeStatus(request());
+            $dataInfo = $this->chefService->changeStatus(request());
 
             if ($dataInfo->wasChanged()) {
-                $message = 'Popular Food ' . request()->status . ' Successfully';
-                $this->storeAdminWorkLog($dataInfo->id, 'popular_foods', $message);
+                $message = 'Chef ' . request()->status . ' Successfully';
+                $this->storeAdminWorkLog($dataInfo->id, 'chefs', $message);
 
                 DB::commit();
 
@@ -304,14 +297,14 @@
             } else {
                 DB::rollBack();
 
-                $message = "Failed To " . request()->status . " PopularFood.";
+                $message = "Failed To " . request()->status . " Chef.";
                 return redirect()
                     ->back()
                     ->with('errorMessage', $message);
             }
         } catch (Exception $err) {
             DB::rollBack();
-            $this->storeSystemError('Backend', 'PopularFoodController', 'changeStatus', substr($err->getMessage(), 0, 1000));
+            $this->storeSystemError('Backend', 'ChefController', 'changeStatus', substr($err->getMessage(), 0, 1000));
             DB::commit();
             $message = "Server Errors Occur. Please Try Again.";
             return redirect()
