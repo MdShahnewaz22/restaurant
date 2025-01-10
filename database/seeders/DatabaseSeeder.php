@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
 
             AdminSeeder::class,
             PopularFoodSeeder::class,
+            ChefSeeder::class,
           
         ]);
     }

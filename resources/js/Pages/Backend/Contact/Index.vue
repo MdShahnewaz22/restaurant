@@ -35,9 +35,9 @@ const applyFilter = () => {
 
                     <div class="flex space-x-2">
                         <div class="w-full">
-                            <input id="title_en" v-model="filters.name"
+                            <input id="name" v-model="filters.name"
                                    class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
-                                   type="text" placeholder="Title" @input="applyFilter" />
+                                   type="text" placeholder="Name" @input="applyFilter" />
                         </div>
 
                         <div class="block min-w-24 md:hidden">

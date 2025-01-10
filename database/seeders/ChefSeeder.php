@@ -23,6 +23,21 @@ class ChefSeeder extends Seeder
     private function datas()
     {
         return [
+            [
+                'image'=>'chefs/chef1.png',
+                'name'=>'Ralph Edwards',
+                'designation'=>'Chef Lead',
+            ],
+            [
+                'image'=>'chefs/chef2.png',
+                'name'=>'Leslie Alexander',
+                'designation'=>'Chef Assistant',
+            ],
+            [
+                'image'=>'chefs/chef3.png',
+                'name'=>'Ronald Richards',
+                'designation'=>'Chef Assistant',
+            ]
             // dummy data array will be here
         ];
     }
