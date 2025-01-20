@@ -245,6 +245,127 @@ class MenuSeeder extends Seeder
         ],
     ],
 
+    [
+        'name' => 'Location Manager',
+        'icon' => 'map',
+        'route' => null,
+        'description' => null,
+        'sorting' => 1,
+        'parent_id' => null,
+        'permission_name' => 'location-manager',
+        'status' => 'Active',
+        // 'created_at' => '2023-10-03 13:21:46',
+        // 'updated_at' => '2023-10-03 13:21:46',
+        'deleted_at' => null,
+        'children' => [
+            [
+                'name' => 'Division List',
+                'icon' => 'list',
+                'route' => 'backend.division.index',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'division-list',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:18',
+                'updated_at' => '2023-10-03 13:21:18',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'Division Add',
+                'icon' => 'plus-circle',
+                'route' => 'backend.division.create',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'division-add',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:46',
+                'updated_at' => '2023-10-03 13:21:46',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'District List',
+                'icon' => 'list',
+                'route' => 'backend.district.index',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'district-list',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:18',
+                'updated_at' => '2023-10-03 13:21:18',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'District Add',
+                'icon' => 'plus-circle',
+                'route' => 'backend.district.create',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'district-add',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:46',
+                'updated_at' => '2023-10-03 13:21:46',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'Upazila List',
+                'icon' => 'list',
+                'route' => 'backend.upazila.index',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'upazila-list',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:18',
+                'updated_at' => '2023-10-03 13:21:18',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'Upazila Add',
+                'icon' => 'plus-circle',
+                'route' => 'backend.upazila.create',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'upazila-add',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:46',
+                'updated_at' => '2023-10-03 13:21:46',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'Union List',
+                'icon' => 'list',
+                'route' => 'backend.union.index',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'union-list',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:18',
+                'updated_at' => '2023-10-03 13:21:18',
+                'deleted_at' => null,
+            ],
+            [
+                'name' => 'Union Add',
+                'icon' => 'plus-circle',
+                'route' => 'backend.union.create',
+                'description' => null,
+                'sorting' => 1,
+
+                'permission_name' => 'union-add',
+                'status' => 'Active',
+                'created_at' => '2023-10-03 13:21:46',
+                'updated_at' => '2023-10-03 13:21:46',
+                'deleted_at' => null,
+            ],
+        ],
+    ],
+
+
     //don't remove this comment from menu seeder
         ];
     }

@@ -33,6 +33,10 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             PopularFoodSeeder::class,
             ChefSeeder::class,
+            DivisionSeeder::class,
+            DistrictSeeder::class,
+            UpazilaSeeder::class,
+            UnionSeeder::class,
           
         ]);
     }

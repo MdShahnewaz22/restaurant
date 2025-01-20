@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\PopularFoodController;
 use App\Http\Controllers\Backend\ChefController;
+use App\Http\Controllers\Backend\DivisionController;
+use App\Http\Controllers\Backend\DistrictController;
+use App\Http\Controllers\Backend\UpazilaController;
+use App\Http\Controllers\Backend\UnionController;
 //don't remove this comment from route namespace
 
 /*
@@ -75,6 +79,28 @@ Route::group(['middleware' => 'AdminAuth'], function () {
     // for Chef
 	Route::resource('chef', ChefController::class);
 	Route::get('chef/{id}/status/{status}/change', [ChefController::class, 'changeStatus'])->name('chef.status.change');
+
+    //for Division
+    Route::resource('division', DivisionController::class);
+
+    Route::get('division/{id}/status/{status}/change', [DivisionController::class, 'changeStatus'])->name('division.status.change');
+
+    // for district
+    Route::resource('district', DistrictController::class);
+
+    Route::get('district/{id}/status/{status}/change', [DistrictController::class, 'changeStatus'])->name('district.status.change');
+   // for upazila
+   Route::resource('upazila', UpazilaController::class);
+
+   Route::get('upazila/{id}/status/{status}/change', [UpazilaController::class, 'changeStatus'])->name('upazila.status.change');
+
+
+   // for union
+   Route::resource('union', UnionController::class);
+
+   Route::get('union/{id}/status/{status}/change', [UnionController::class, 'changeStatus'])->name('union.status.change');
+
+
 
 	//don't remove this comment from route body
 });
