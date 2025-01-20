@@ -56,7 +56,7 @@
         return [
             'Sl/No',
             'Image',
-            'Name',
+            'Food Name',
 			'Description',
 			'Price',
             'Status',
