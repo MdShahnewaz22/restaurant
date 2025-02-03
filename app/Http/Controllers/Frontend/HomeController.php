@@ -106,4 +106,10 @@ class HomeController extends Controller
     {
         return view('frontend.pages.services');
     }
+
+    function languageSet($lang)
+    {
+        session()->put('locale', $lang);
+        return redirect()->back();
+    }
 }

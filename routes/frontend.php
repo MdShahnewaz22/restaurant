@@ -50,3 +50,5 @@ Route::get('/blog_left_sidebar', [HomeController::class, 'blog_left_sidebar'])->
 Route::get('/chef', [HomeController::class, 'chef'])->name('chef');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
+
+Route::get('lang/{lang}', [HomeController::class, 'languageSet'])->name('languageSet');

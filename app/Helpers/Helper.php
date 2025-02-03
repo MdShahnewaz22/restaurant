@@ -319,6 +319,12 @@ function camelCaseVariable($string)
     return lcfirst($firstWord) . implode('', $words);
 }
 
-function camelCase($str) {
+function camelCase($str)
+{
     return lcfirst(str_replace(' ', '', ucwords(str_replace(['_', '-'], ' ', $str))));
+}
+
+function translate($english, $bangla)
+{
+    return (session()->has('locale') && session()->get('locale') == 'bn') ? $bangla:$english;
 }

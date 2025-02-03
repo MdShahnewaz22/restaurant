@@ -19,6 +19,13 @@
                             <a href="#"><i class="fab fa-youtube"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
+
+                        <div class="mr-50 language-buttons me-2">
+                            <a class="btn btn-primary lang-btn"
+                                href="{{ route('frontend.languageSet', ['lang' => 'en']) }}">En</a>
+                            <a class="btn btn-primary lang-btn"
+                                href="{{ route('frontend.languageSet', ['lang' => 'bn']) }}">Bn</a>
+                        </div>
                     </div>
                     <div id="header-sticky" class="header-1">
                         <div class="mega-menu-wrapper">
