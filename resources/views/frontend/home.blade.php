@@ -227,15 +227,15 @@
                                                     <div class="banner-style1">
                                                         <div class="section-title">
                                                             <h6 class="sub-title" data-animation="slideInRight"
-                                                                data-duration="2s" data-delay=".3s"> WELCOME FRESHEAT
+                                                                data-duration="2s" data-delay=".3s"> {{translate('WELCOME FRESHEAT','ফ্রেশিটে স্বাগতম')}}
                                                             </h6>
                                                             <h1 class="title" data-animation="slideInRight"
                                                                 data-duration="2s" data-delay=".5s">
-                                                                SPICY FRIED CHICKEN
+                                                                {{translate('SPICY FRIED CHICKEN','স্পিসি ফ্রাইড চিকেন')}}
                                                             </h1>
                                                             <a class="theme-btn" href="contact.html"
                                                                 data-animation="slideInRight" data-duration="2s"
-                                                                data-delay=".7s">ORDER NOW <i
+                                                                data-delay=".7s">{{translate('ORDER NOW','অর্ডার করুন')}} <i
                                                                     class="fa-sharp fa-regular fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>
@@ -287,15 +287,15 @@
                                                     <div class="banner-style1">
                                                         <div class="section-title">
                                                             <h6 class="sub-title" data-animation="slideInRight"
-                                                                data-duration="2s" data-delay=".3s"> WELCOME FRESHEAT
+                                                                data-duration="2s" data-delay=".3s"> {{translate('WELCOME FRESHEAT','ফ্রেশিটে স্বাগতম')}}
                                                             </h6>
                                                             <h1 class="title" data-animation="slideInRight"
                                                                 data-duration="2s" data-delay=".5s">
-                                                                Chicago Deep Pizza King
+                                                                {{translate('Chicago Deep Pizza King','শিকাগো ডিপ পিৎজা কিং')}}
                                                             </h1>
                                                             <a class="theme-btn" href="menu.html"
                                                                 data-animation="slideInRight" data-duration="2s"
-                                                                data-delay=".7s">ORDER NOW <i
+                                                                data-delay=".7s">{{translate('ORDER NOW','অর্ডার করুন')}} <i
                                                                     class="fa-sharp fa-regular fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>
@@ -347,15 +347,15 @@
                                                     <div class="banner-style1">
                                                         <div class="section-title">
                                                             <h6 class="sub-title" data-animation="slideInRight"
-                                                                data-duration="2s" data-delay=".3s"> WELCOME FRESHEAT
+                                                                data-duration="2s" data-delay=".3s"> {{translate('WELCOME FRESHEAT','ফ্রেশিটে স্বাগতম')}}
                                                             </h6>
                                                             <h1 class="title" data-animation="slideInRight"
                                                                 data-duration="2s" data-delay=".5s">
-                                                                Chicago Deep Burger King
+                                                                {{translate('Chicago Deep Burger King','শিকাগো ডিপ বার্গার কিং')}}
                                                             </h1>
                                                             <a class="theme-btn" href="menu.html"
                                                                 data-animation="slideInRight" data-duration="2s"
-                                                                data-delay=".7s">ORDER NOW <i
+                                                                data-delay=".7s">{{translate('ORDER NOW','অর্ডার করুন')}} <i
                                                                     class="fa-sharp fa-regular fa-arrow-right"></i></a>
                                                         </div>
                                                     </div>
@@ -1049,7 +1049,7 @@
                                                     </div>
                                                 </div>
 
-                                                <h6>{{translate('$95.99','$95.99')}}</h6>
+                                                <h6>{{translate('$95.99','$৯৫.৯৯')}}</h6>
                                             </div>
                                             <div class="single-menu-items">
                                                 <div class="details">
@@ -1064,7 +1064,7 @@
                                                     </div>
                                                 </div>
 
-                                                <h6>$75.99</h6>
+                                                <h6>{{translate('$75.99','$৭৫.৯৯')}}</h6>
                                             </div>
                                             <div class="single-menu-items">
                                                 <div class="details">
@@ -1073,13 +1073,13 @@
                                                             alt="thumb"></div>
                                                     <div class="menu-content">
                                                         <a href="menu.html">
-                                                            <h3>Brief Chicken</h3>
+                                                            <h3>{{translate('Brief Chicken','ব্রিফ চিকেন')}}</h3>
                                                         </a>
                                                         <p>{{translate('Its a testament to our.','এটা আমাদের জন্য একটি প্রমাণ।')}}</p>
                                                     </div>
                                                 </div>
 
-                                                <h6>$44.99</h6>
+                                                <h6>{{translate('$44.99','$৪৪.৯৯')}}</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -1095,13 +1095,14 @@
                                                             alt="thumb"></div>
                                                     <div class="menu-content">
                                                         <a href="menu.html">
-                                                            <h3>Chinese Pasta</h3>
+                                                            <h3>{{translate('Chinese Pasta','চাইনিজ পাস্তা')}}</h3>
+
                                                         </a>
                                                         <p>{{translate('Its a testament to our.','এটা আমাদের জন্য একটি প্রমাণ।')}}</p>
                                                     </div>
                                                 </div>
 
-                                                <h6>$15.99</h6>
+                                                <h6>{{translate('$15.99','$১৫.৯৯')}}</h6>
                                             </div>
                                             <div class="single-menu-items">
                                                 <div class="details">
@@ -1110,13 +1111,13 @@
                                                             alt="thumb"></div>
                                                     <div class="menu-content">
                                                         <a href="menu.html">
-                                                            <h3>Chicken Fried Rice</h3>
+                                                            <h3>{{translate('Chicken Fried Rice','চিকেন ফ্রাইড রাইস')}}</h3>
                                                         </a>
                                                         <p>{{translate('Its a testament to our.','এটা আমাদের জন্য একটি প্রমাণ।')}}</p>
                                                     </div>
                                                 </div>
 
-                                                <h6>$25.99</h6>
+                                                <h6>{{translate('$25.99','$২৫.৯৯')}}</h6>
                                             </div>
                                             <div class="single-menu-items">
                                                 <div class="details">
@@ -1125,13 +1126,13 @@
                                                             alt="thumb"></div>
                                                     <div class="menu-content">
                                                         <a href="menu.html">
-                                                            <h3>Chicken Pizza</h3>
+                                                            <h3>{{translate('Chicken Pizza','চিকেন পিৎজা')}}</h3>
                                                         </a>
                                                         <p>{{translate('Its a testament to our.','এটা আমাদের জন্য একটি প্রমাণ।')}}</p>
                                                     </div>
                                                 </div>
 
-                                                <h6>$115.99</h6>
+                                                <h6>{{translate('$115.99','$১১৫.৯৯')}}</h6>
                                             </div>
                                             <div class="single-menu-items">
                                                 <div class="details">
@@ -1140,13 +1141,13 @@
                                                             alt="thumb"></div>
                                                     <div class="menu-content">
                                                         <a href="menu.html">
-                                                            <h3>Chicken Noodles</h3>
+                                                            <h3>{{translate('Chicken Noodles','চিকেন নুডলস')}}</h3>
                                                         </a>
                                                         <p>{{translate('Its a testament to our.','এটা আমাদের জন্য একটি প্রমাণ।')}}</p>
                                                     </div>
                                                 </div>
 
-                                                <h6>$154.99</h6>
+                                                <h6>{{translate('$154.99','$১৫৪.৯৯')}}</h6>
                                             </div>
                                             <div class="single-menu-items">
                                                 <div class="details">
@@ -1675,11 +1676,11 @@
                     <div class="title-area">
                         <div class="text-center sub-title wow fadeInUp" data-wow-delay="0.5s">
                             <img class="me-1" src="{{ asset('assets/frontend/assets/img/icon/titleIcon.svg') }}"
-                                alt="icon">OUR CHEFE<img class="ms-1"
+                                alt="icon">{{translate('OUR CHEFE','আমাদের শেফ')}}<img class="ms-1"
                                 src="{{ asset('assets/frontend/assets/img/icon/titleIcon.svg') }}" alt="icon">
                         </div>
                         <h2 class="title wow fadeInUp" data-wow-delay="0.7s">
-                            Meet Our Expert Chefe
+                            {{translate('Meet Our Expert Chefe','আমাদের বিশেষজ্ঞ শেফের সাথে দেখা করুন')}}
                         </h2>
                     </div>
                     <div class="pb-5 chefe-card-wrap style1">
@@ -1699,9 +1700,9 @@
                                     </div>
                                     <div class="chefe-content">
                                         <a href="chef-details.html">
-                                            <h3>Ralph Edwards</h3>
+                                            <h3>{{translate('Ralph Edwards','রালফ এডওয়ার্ডস')}}</h3>
                                         </a>
-                                        <p>Chef Lead</p>
+                                        <p>{{translate('Chef Lead','শেফ লিড')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1720,9 +1721,9 @@
                                     </div>
                                     <div class="chefe-content">
                                         <a href="chef-details.html">
-                                            <h3>Leslie Alexander</h3>
+                                            <h3>{{translate('Leslie Alexander','লেসলি আলেকজান্ডার')}}</h3>
                                         </a>
-                                        <p>Chef Assistant</p>
+                                        <p>{{translate('Chef Assistant','শেফ সহকারী')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1741,9 +1742,9 @@
                                     </div>
                                     <div class="chefe-content">
                                         <a href="chef-details.html">
-                                            <h3>Ronald Richards</h3>
+                                            <h3>{{translate('Ronald Richards','রোনাল্ড রিচার্ডস')}}</h3>
                                         </a>
-                                        <p>Chef Assistant</p>
+                                        <p>{{translate('Chef Assistant','শেফ সহকারী')}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -1817,12 +1818,12 @@
                                 <div class="text-center sub-title wow fadeInUp" data-wow-delay="0.5s">
                                     <img class="me-1"
                                         src="{{ asset('assets/frontend/assets/img/icon/titleIcon.svg') }}"
-                                        alt="icon">Testimonials<img class="ms-1"
+                                        alt="icon">{{translate('Testimonials','প্রশংসাপত্র')}}<img class="ms-1"
                                         src="{{ asset('assets/frontend/assets/img/icon/titleIcon.svg') }}"
                                         alt="icon">
                                 </div>
                                 <h2 class="text-white title wow fadeInUp" data-wow-delay="0.7s">
-                                    What our Clients Say
+                                    {{translate('What our Clients Say','আমাদের ক্লায়েন্টরা যা বলেন')}}
                                 </h2>
                             </div>
                             <div class="slider-area">
@@ -1836,8 +1837,8 @@
                                                                 src="{{ asset('assets/frontend/assets/img/testimonial/testimonialProfile1_1.png') }}"
                                                                 alt="thumb"></div>
                                                         <div class="item2">
-                                                            <h6>Albert Flores</h6>
-                                                            <p>Web Designer</p>
+                                                            <h6>{{translate('Albert Flores','অ্যালবার্ট ফ্লোরেস')}}</h6>
+                                                            <p>{{translate('Web Designer','ওয়েব ডিজাইনার')}}</p>
                                                             <div class="icon"><img
                                                                     src="{{ asset('assets/frontend/assets/img/icon/star.svg') }}"
                                                                     alt="icon"></div>
@@ -1870,22 +1871,20 @@
                 <div class="marquee-inner to-left">
                     <ul class="marqee-list d-flex">
                         <li class="marquee-item style-2">
-                            <span class="text-slider"></span><span class="text-slider text-style">chicken pizza</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">GRILLED CHICKEN</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">BURGER</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">CHICKEN PIZZA</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">FRESH PASTA</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">ITALIANO FRENCH
-                                FRY</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">CHICKEN FRY</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">chicken pizza</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">GRILLED CHICKEN</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">BURGER</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">CHICKEN PIZZA</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">FRESH PASTA</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">ITALIANO FRENCH
-                                FRY</span>
-                            <span class="text-slider"></span><span class="text-slider text-style">CHICKEN FRY</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('CHICKEN PIZZA','চিকেন পিৎজা')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('GRILLED CHICKEN','গ্রিলড চিকেন')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('BURGER','বার্গার')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('CHICKEN PIZZA','চিকেন পিৎজা')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('FRESH PASTA','ফ্রেশ পাস্তা')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('ITALIANO FRENCH FRY','ইতালিয়ান ফ্রেঞ্চ ফ্রাই')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('CHICKEN FRY','চিকেন ফ্রাই')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('CHICKEN PIZZA','চিকেন পিৎজা')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('GRILLED CHICKEN','গ্রিলড চিকেন')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('BURGER','বার্গার')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('CHICKEN PIZZA','চিকেন পিৎজা')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('FRESH PASTA','ফ্রেশ পাস্তা')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('ITALIANO FRENCH FRY','ইতালিয়ান ফ্রেঞ্চ ফ্রাই')}}</span>
+                            <span class="text-slider"></span><span class="text-slider text-style">{{translate('CHICKEN FRY','চিকেন ফ্রাই')}}</span>
                         </li>
                     </ul>
                 </div>
@@ -1906,11 +1905,11 @@
                         <div class="title-area">
                             <div class="text-center sub-title wow fadeInUp" data-wow-delay="0.5s">
                                 <img class="me-1" src="{{ asset('assets/frontend/assets/img/icon/titleIcon.svg') }}"
-                                    alt="icon">LATEST NEWS<img class="ms-1"
+                                    alt="icon">{{translate('LATEST NEWS','সর্বশেষ সংবাদ')}}<img class="ms-1"
                                     src="{{ asset('assets/frontend/assets/img/icon/titleIcon.svg') }}" alt="icon">
                             </div>
                             <h2 class="title wow fadeInUp" data-wow-delay="0.7s">
-                                Our Latest Foods News
+                                {{translate('Our Latest Foods News','আমাদের সর্বশেষ খাবারের খবর')}}
                             </h2>
                         </div>
                         <div class="slider-area">
@@ -1925,25 +1924,25 @@
                                             <div class="blog-content">
                                                 <div class="blog-meta">
                                                     <div class="item1">
-                                                        <h6>15</h6>
-                                                        <p>Dec</p>
+                                                        <h6>{{translate('15','১৫')}}</h6>
+                                                        <p>{{translate('Dec','ডিসেম্বর')}}</p>
                                                     </div>
                                                     <div class="item2">
                                                         <div class="icon"><img
                                                                 src="{{ asset('assets/frontend/assets/img/icon/user.svg') }}"
-                                                                alt="icon"><span>By Admin</span></div>
+                                                                alt="icon"><span>{{translate('By Admin','অ্যাডমিন দ্বারা')}}</span></div>
                                                     </div>
                                                     <div class="item3">
                                                         <div class="icon"><img
                                                                 src="{{ asset('assets/frontend/assets/img/icon/tag.svg') }}"
-                                                                alt="icon"><span>Noodles</span></div>
+                                                                alt="icon"><span>{{translate('Noodles','নুডলস')}}</span></div>
                                                     </div>
                                                 </div>
                                                 <a href="blog-details.html">
-                                                    <h3>Fast Food Frenzy a Taste of Convenience</h3>
+                                                    <h3>{{translate('Fast Food Frenzy a Taste of Convenience','ফাস্ট ফুড উন্মাদনা, সুবিধার স্বাদ')}}</h3>
                                                 </a>
                                                 <a href="blog-details.html" class="link-btn">
-                                                    <span>Read More</span> <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <span>{{translate('Read More','আরও বিস্তারিত!')}}</span> <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -1958,24 +1957,24 @@
                                                 <div class="blog-meta">
                                                     <div class="item1">
                                                         <h6>17</h6>
-                                                        <p>Dec</p>
+                                                        <p>{{translate('Dec','ডিসেম্বর')}}</p>
                                                     </div>
                                                     <div class="item2">
                                                         <div class="icon"><img
                                                                 src="{{ asset('assets/frontend/assets/img/icon/user.svg') }}"
-                                                                alt="icon"><span>By Admin</span></div>
+                                                                alt="icon"><span>{{translate('By Admin','অ্যাডমিন দ্বারা')}}</span></div>
                                                     </div>
                                                     <div class="item3">
                                                         <div class="icon"><img
                                                                 src="{{ asset('assets/frontend/assets/img/icon/tag.svg') }}"
-                                                                alt="icon"><span>Chicken</span></div>
+                                                                alt="icon"><span>{{translate('Chicken','মুরগি')}}</span></div>
                                                     </div>
                                                 </div>
                                                 <a href="blog-details.html">
-                                                    <h3>Benefits of health and safety measures</h3>
+                                                    <h3>{{translate('Benefits of health and safety measures','স্বাস্থ্য ও নিরাপত্তা ব্যবস্থার সুবিধা')}}</h3>
                                                 </a>
                                                 <a href="blog-details.html" class="link-btn">
-                                                    <span>Read More</span> <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <span>{{translate('Read More','আরও বিস্তারিত!')}}</span> <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -1990,12 +1989,12 @@
                                                 <div class="blog-meta">
                                                     <div class="item1">
                                                         <h6>25</h6>
-                                                        <p>Dec</p>
+                                                        <p>{{translate('Dec','ডিসেম্বর')}}</p>
                                                     </div>
                                                     <div class="item2">
                                                         <div class="icon"><img
                                                                 src="{{ asset('assets/frontend/assets/img/icon/user.svg') }}"
-                                                                alt="icon"><span>By Admin</span></div>
+                                                                alt="icon"><span>{{translate('By Admin','অ্যাডমিন দ্বারা')}}</span></div>
                                                     </div>
                                                     <div class="item3">
                                                         <div class="icon"><img
@@ -2004,10 +2003,10 @@
                                                     </div>
                                                 </div>
                                                 <a href="blog-details.html">
-                                                    <h3>Quick Cravings Unraveling Fast Food Delights</h3>
+                                                    <h3>{{translate('Quick Cravings Unraveling Fast Food Delights','দ্রুত আকাঙ্ক্ষা ফাস্ট ফুডের আনন্দ উন্মোচন করে')}}</h3>
                                                 </a>
                                                 <a href="blog-details.html" class="link-btn">
-                                                    <span>Read More</span> <i class="fa-solid fa-arrow-right-long"></i>
+                                                    <span>{{translate('Read More','আরও বিস্তারিত!')}}</span> <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
                                         </div>
