@@ -42,7 +42,7 @@
                                                 <ul>
                                                     <li class="has-dropdown active menu-thumb">
                                                         <a href="{{route('frontend.home')}}">
-                                                            Home
+                                                            {{translate('Home','হোম')}}
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu has-homemenu">
@@ -139,36 +139,35 @@
                                                     </li>
                                                     <li class="has-dropdown">
                                                         <a href="about.html">
-                                                            About Us
+                                                            {{translate('About Us','আমাদের সম্পর্কে')}}
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
-                                                            <li><a href="{{route('frontend.aboutUs1')}}">About Us 01</a></li>
-                                                            <li><a href="{{route('frontend.aboutUs2')}}">About Us 02</a>
+                                                            <li><a href="{{route('frontend.aboutUs1')}}">{{translate('About Us 01','আমাদের সম্পর্কে ০১')}}</a></li>
+                                                            <li><a href="{{route('frontend.aboutUs2')}}">{{translate('About Us 02','আমাদের সম্পর্কে ০২')}}</a>
                                                             </li>
                                                         </ul>
                                                     </li>
                                                     <li>
                                                         <a href="{{route('frontend.shop')}}">
-                                                            Shop
+                                                            {{translate('Shop','দোকান')}}
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
-                                                            <li><a href="{{route('frontend.shop')}}">Shop</a></li>
-                                                            <li><a href="{{route('frontend.shop_right_sidebar')}}">Shop Right Sidebar</a>
+                                                            <li><a href="{{route('frontend.shop')}}">{{translate('Shop','দোকান')}}</a></li>
+                                                            <li><a href="{{route('frontend.shop_right_sidebar')}}">{{translate('Shop Right Sidebar','ডান সাইডবারে কেনাকাটা করুন')}}</a>
                                                             </li>
-                                                            <li><a href="{{route('frontend.shop_list')}}">Shop List</a></li>
-                                                            <li><a href="{{route('frontend.shop_list_right_sidebar')}}">Shop List Right
-                                                                    Sidebar</a></li>
-                                                            <li><a href="{{route('frontend.shop_details')}}">Shop Details</a></li>
-                                                            <li><a href="{{route('frontend.cart')}}">Cart List</a></li>
-                                                            <li><a href="{{route('frontend.checkout')}}">Checkout</a></li>
-                                                            <li><a href="{{route('frontend.wishlist')}}">Wishlist</a></li>
+                                                            <li><a href="{{route('frontend.shop_list')}}">{{translate('Shop List','দোকানের তালিকা')}}</a></li>
+                                                            <li><a href="{{route('frontend.shop_list_right_sidebar')}}">{{translate('Shop List Right Sidebar','দোকানের তালিকার ডান সাইডবার')}}</a></li>
+                                                            <li><a href="{{route('frontend.shop_details')}}">{{translate('Shop Details','দোকানের বিবরণ')}}</a></li>
+                                                            <li><a href="{{route('frontend.cart')}}">{{translate('Cart List','কার্টের তালিকা')}}</a></li>
+                                                            <li><a href="{{route('frontend.checkout')}}">{{translate('Checkout','চেকআউট')}}</a></li>
+                                                            <li><a href="{{route('frontend.wishlist')}}">{{translate('Wishlist','ইচ্ছা তালিকা')}}</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="has-dropdown">
                                                         <a href="#">
-                                                            Pages
+                                                            {{translate('Pages','পাতা')}}
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
@@ -218,7 +217,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="{{route('frontend.blog')}}">
-                                                            Blog
+                                                            {{translate('Blog','ব্লগ')}}
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
@@ -231,7 +230,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="contact.html">
-                                                            Contact Us
+                                                            {{translate('Contact Us','যোগাযোগ করুন')}}
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
                                                         <ul class="submenu">
@@ -320,7 +319,7 @@
                                         </div>
                                     </div>
 
-                                    <a class="theme-btn" href="menu.html">ORDER NOW <i
+                                    <a class="theme-btn" href="menu.html">{{translate('ORDER NOW','অর্ডার করুন')}} <i
                                             class="fa-sharp fa-regular fa-arrow-right"></i></a>
                                     <div class="my-auto header__hamburger d-xl-block">
                                         <div class="sidebar__toggle">
