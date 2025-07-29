@@ -5,57 +5,6 @@
 
  <body class="bg-color2">
 
-    <!-- Preloader Start -->
-    {{-- <div id="preloader" class="preloader">
-        <div class="animation-preloader">
-            <div class="spinner">
-            </div>
-            <div class="txt-loading">
-                <span data-text-preloader="F" class="letters-loading">
-                    F
-                </span>
-                <span data-text-preloader="R" class="letters-loading">
-                    R
-                </span>
-                <span data-text-preloader="E" class="letters-loading">
-                    E
-                </span>
-                <span data-text-preloader="S" class="letters-loading">
-                    S
-                </span>
-                <span data-text-preloader="H" class="letters-loading">
-                    H
-                </span>
-                <span data-text-preloader="E" class="letters-loading">
-                    E
-                </span>
-                <span data-text-preloader="A" class="letters-loading">
-                    A
-                </span>
-                <span data-text-preloader="T" class="letters-loading">
-                    T
-                </span>
-            </div>
-            <p class="text-center">Loading</p>
-        </div>
-        <div class="loader">
-            <div class="row">
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-
     <!--<< Mouse Cursor Start >>-->
     <div class="mouse-cursor cursor-outer"></div>
     <div class="mouse-cursor cursor-inner"></div>
@@ -215,7 +164,7 @@
                         <div class="contact-box style1">
                             <div class="contact-icon"><img src="{{asset('assets/frontend/assets/img/icon/location.png')}}" alt="icon"></div>
                             <h3 class="title">Our Address</h3>
-                            <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+                            <p>Aftabnagar,Dhaka,Bangladesh</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3">
@@ -228,7 +177,7 @@
                     <div class="col-md-6 col-xl-3">
                         <div class="contact-box style1">
                             <div class="contact-icon"><img src="{{asset('assets/frontend/assets/img/icon/phone.png')}}" alt="icon"></div>
-                            <h3 class="title">Hot: +208-666-01112</h3>
+                            <h3 class="title">Hot: 01785915418</h3>
                             <p>24/7/365 priority Live Chat and ticketing support.</p>
                         </div>
                     </div>

@@ -30,23 +30,18 @@ Route::get('/cache-clear', function () {
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/about-us1', [HomeController::class, 'aboutUs1'])->name('aboutUs1');
-Route::get('/about-us2', [HomeController::class, 'aboutUs2'])->name('aboutUs2');
+Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('aboutUs');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('/shop_details', [HomeController::class, 'shop_details'])->name('shop_details');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cart');
 Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
-Route::get('/shop_right_sidebar', [HomeController::class, 'shop_right_sidebar'])->name('shop_right_sidebar');
 Route::get('/shop_list', [HomeController::class, 'shop_list'])->name('shop_list');
-Route::get('/shop_list_right_sidebar', [HomeController::class, 'shop_list_right_sidebar'])->name('shop_list_right_sidebar');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('/contact2', [HomeController::class, 'contact2'])->name('contact2');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/blog_details', [HomeController::class, 'blog_details'])->name('blog_details');
 Route::get('/blog_standard', [HomeController::class, 'blog_standard'])->name('blog_standard');
-Route::get('/blog_left_sidebar', [HomeController::class, 'blog_left_sidebar'])->name('blog_left_sidebar');
 Route::get('/chef', [HomeController::class, 'chef'])->name('chef');
 Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/services', [HomeController::class, 'services'])->name('services');

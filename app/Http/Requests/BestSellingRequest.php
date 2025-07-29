@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ChefRequest extends FormRequest
+class BestSellingRequest extends FormRequest
 {
 
     /**
@@ -19,15 +19,18 @@ class ChefRequest extends FormRequest
                 return [
                     'image' => 'nullable|mimes:png,jpg,jpeg|max:25048',
                     'name' => 'required|string',
-					'designation' => 'required|string'
+					'description' => 'required|string',
+					'price' => 'required|string'
                 ];
                 break;
 
             case 'PATCH':
             case 'PUT':
                 return [
+                    // 'image' => 'nullable|string',
                     'name' => 'required|string',
-					'designation' => 'required|string'
+					'description' => 'required|string',
+					'price' => 'required|string'
                 ];
                 if ($this->hasFile('image')) {
                     $rules['image'] = 'nullable|file|mimes:png,jpg,jpeg|max:25048';
@@ -43,8 +46,11 @@ class ChefRequest extends FormRequest
     public function messages()
     {
         return [
+            // 'image.required' => 'The image field is required.',
             'name.required' => 'The name field is required.',
- 			'designation.required' => 'The designation field is required.',
+ 			'description.required' => 'The description field is required.',
+ 			'price.required' => 'The price field is required.',
+
         ];
     }
 }

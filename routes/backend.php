@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\PopularFoodController;
+use App\Http\Controllers\Backend\BestSellingController;
 use App\Http\Controllers\Backend\ChefController;
 use App\Http\Controllers\Backend\DivisionController;
 use App\Http\Controllers\Backend\DistrictController;
@@ -74,6 +75,9 @@ Route::group(['middleware' => 'AdminAuth'], function () {
     // for Popular Food
 	Route::resource('popularfood', PopularFoodController::class);
 	Route::get('popularfood/{id}/status/{status}/change', [PopularFoodController::class, 'changeStatus'])->name('popularfood.status.change');
+    // for Best Selling
+	Route::resource('bestselling', BestSellingController::class);
+	Route::get('bestselling/{id}/status/{status}/change', [BestSellingController::class, 'changeStatus'])->name('bestselling.status.change');
 
 
     // for Chef

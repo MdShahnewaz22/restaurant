@@ -2,9 +2,9 @@
     namespace App\Http\Controllers\Backend;
 
     use App\Http\Controllers\Controller;
-    use App\Http\Requests\ChefRequest;
+    use App\Http\Requests\BestSellingRequest;
     use Illuminate\Support\Facades\DB;
-    use App\Services\ChefService;
+    use App\Services\BestSellingService;
     use Illuminate\Http\Request;
     use Illuminate\Support\Str;
     use Illuminate\Support\Facades\Schema;
@@ -12,26 +12,26 @@
     use App\Traits\SystemTrait;
     use Exception;
 
-    class ChefController extends Controller
+    class BestSellingController extends Controller
     {
         use SystemTrait;
 
-        protected $chefService;
+        protected $bestsellingService;
 
-        public function __construct(ChefService $chefService)
+        public function __construct(BestSellingService $bestsellingService)
         {
-            $this->chefService = $chefService;
+            $this->bestsellingService = $bestsellingService;
         }
 
         public function index()
         {
             return Inertia::render(
-                'Backend/Chef/Index',
+                'Backend/BestSelling/Index',
                 [
-                    'pageTitle' => fn () => 'Chef List',
+                    'pageTitle' => fn () => 'Best Selling List',
                     'breadcrumbs' => fn () => [
-                        ['link' => null, 'title' => 'Chef Manage'],
-                        ['link' => route('backend.chef.index'), 'title' => 'Chef List'],
+                        ['link' => null, 'title' => 'Best Selling Manage'],
+                        ['link' => route('backend.bestselling.index'), 'title' => 'Best Selling List'],
                     ],
                     'tableHeaders' => fn () => $this->getTableHeaders(),
                     'dataFields' => fn () => $this->getDataFields(),
@@ -46,7 +46,8 @@
             ['fieldName' => 'index', 'class' => 'text-center'],
             ['fieldName' => 'image', 'class' => 'text-center'],
             ['fieldName' => 'name', 'class' => 'text-center'],
-			['fieldName' => 'designation', 'class' => 'text-center'],
+			['fieldName' => 'description', 'class' => 'text-center'],
+			['fieldName' => 'price', 'class' => 'text-center'],
             ['fieldName' => 'status', 'class' => 'text-center'],
         ];
     }
@@ -55,8 +56,9 @@
         return [
             'Sl/No',
             'Image',
-            'Chef Name',
-			'Designation',
+            'Food Name',
+			'Description',
+			'Price',
             'Status',
             'Action'
         ];
@@ -64,17 +66,16 @@
 
     private function getDatas()
     {
-        $query = $this->chefService->list();
+        $query = $this->bestsellingService->list();
 
         if(request()->filled('name'))
 				$query->where('name', 'like', request()->name .'%');
 
-			if(request()->filled('designation'))
-				$query->where('designation', 'like', request()->designation .'%');
+			if(request()->filled('description'))
+				$query->where('description', 'like', request()->description .'%');
 
-            if (request()->filled('image'))
-            $query->where('image', 'like', request()->image . '%');
-
+			if(request()->filled('price'))
+				$query->where('price', 'like', request()->price .'%');
 
         $datas = $query->paginate(request()->numOfData ?? 10)->withQueryString();
 
@@ -82,10 +83,10 @@
             $customData = new \stdClass();
             $customData->index = $index + 1;
 
-      
-           $customData->image = '<img src="' . $data->image . '" height="60" width="70"/>';
+            $customData->image = '<img src="' . $data->image . '" height="60" width="70"/>';
             $customData->name = $data->name;
-			$customData->designation = $data->designation;
+			$customData->description = $data->description;
+			$customData->price = $data->price;
 
 
             $customData->status = getStatusText($data->status);
@@ -94,18 +95,18 @@
 
                   [
                     'linkClass' => 'semi-bold text-white statusChange ' . (($data->status == 'Active') ? "bg-gray-500" : "bg-green-500"),
-                    'link' => route('backend.chef.status.change', ['id' => $data->id, 'status' => $data->status == 'Active' ? 'Inactive' : 'Active']),
+                    'link' => route('backend.bestselling.status.change', ['id' => $data->id, 'status' => $data->status == 'Active' ? 'Inactive' : 'Active']),
                     'linkLabel' => getLinkLabel((($data->status == 'Active') ? "Inactive" : "Active"), null, null)
                 ],
 
                 [
                     'linkClass' => 'bg-yellow-400 text-black semi-bold',
-                    'link' => route('backend.chef.edit', $data->id),
+                    'link' => route('backend.bestselling.edit', $data->id),
                     'linkLabel' => getLinkLabel('Edit', null, null)
                 ],
                 [
                     'linkClass' => 'deleteButton bg-red-500 text-white semi-bold',
-                    'link' => route('backend.chef.destroy', $data->id),
+                    'link' => route('backend.bestselling.destroy', $data->id),
                     'linkLabel' => getLinkLabel('Delete', null, null)
                 ]
             ];
@@ -118,35 +119,35 @@
         public function create()
         {
             return Inertia::render(
-                'Backend/Chef/Form',
+                'Backend/BestSelling/Form',
                 [
-                    'pageTitle' => fn () => 'Chef Create',
+                    'pageTitle' => fn () => 'Popular Food Create',
                     'breadcrumbs' => fn () => [
-                        ['link' => null, 'title' => 'Chef Manage'],
-                        ['link' => route('backend.chef.create'), 'title' => 'Chef Create'],
+                        ['link' => null, 'title' => 'Popular Food Manage'],
+                        ['link' => route('backend.bestselling.create'), 'title' => 'Popular Food Create'],
                     ],
                 ]
             );
         }
 
 
-        public function store(ChefRequest $request)
+        public function store(BestSellingRequest $request)
         {
 
             DB::beginTransaction();
             try {
 
                 $data = $request->validated();
+
                 if ($request->hasFile('image')) {
-                    $data['image'] = $this->imageUpload($request->file('image'), 'chefs');
+                    $data['image'] = $this->imageUpload($request->file('image'), 'popular_foods');
                 }
 
-
-                $dataInfo = $this->chefService->create($data);
+                $dataInfo = $this->bestsellingService->create($data);
 
                 if ($dataInfo) {
-                    $message = 'Chef created successfully';
-                    $this->storeAdminWorkLog($dataInfo->id, 'chefs', $message);
+                    $message = 'Popular Food created successfully';
+                    $this->storeAdminWorkLog($dataInfo->id, 'popular_foods', $message);
 
                     DB::commit();
 
@@ -156,7 +157,7 @@
                 } else {
                     DB::rollBack();
 
-                    $message = "Failed To create Chef.";
+                    $message = "Failed To create Popular Food.";
                     return redirect()
                         ->back()
                         ->with('errorMessage', $message);
@@ -164,7 +165,7 @@
             } catch (Exception $err) {
 
                 DB::rollBack();
-                $this->storeSystemError('Backend', 'ChefController', 'store', substr($err->getMessage(), 0, 1000));
+                $this->storeSystemError('Backend', 'BestSellingController', 'store', substr($err->getMessage(), 0, 1000));
 
                 DB::commit();
                 $message = "Server Errors Occur. Please Try Again.";
@@ -175,43 +176,42 @@
             }
         }
 
-    
-
         public function edit($id)
         {
-            $chef = $this->chefService->find($id);
+            $bestselling = $this->bestsellingService->find($id);
 
             return Inertia::render(
-                'Backend/Chef/Form',
+                'Backend/BestSelling/Form',
                 [
-                    'pageTitle' => fn () => 'Chef Edit',
+                    'pageTitle' => fn () => 'Best Selling Edit',
                     'breadcrumbs' => fn () => [
-                        ['link' => null, 'title' => 'Chef Manage'],
-                        ['link' => route('backend.chef.edit', $id), 'title' => 'Chef Edit'],
+                        ['link' => null, 'title' => 'Best Selling Manage'],
+                        ['link' => route('backend.bestselling.edit', $id), 'title' => 'Best Selling Edit'],
                     ],
-                    'chef' => fn () => $chef,
+                    'bestselling' => fn () => $bestselling,
                     'id' => fn () => $id,
                 ]
             );
         }
 
-        public function update(ChefRequest $request, $id)
+        public function update(BestSellingRequest $request, $id)
         {
             DB::beginTransaction();
             try {
 
                 $data = $request->validated();
                 if ($request->hasFile('image')) {
-                    $data['image'] = $this->imageUpload($request->file('image'), 'chefs');
+                    $data['image'] = $this->imageUpload($request->file('image'), 'popular_foods');
                 }
-                $Chef = $this->chefService->find($id);
+
+                $BestSelling = $this->bestsellingService->find($id);
 
 
-                $dataInfo = $this->chefService->update($data, $id);
+                $dataInfo = $this->bestsellingService->update($data, $id);
 
                 if ($dataInfo->save()) {
-                    $message = 'Chef updated successfully';
-                    $this->storeAdminWorkLog($dataInfo->id, 'chefs', $message);
+                    $message = 'Popular Food updated successfully';
+                    $this->storeAdminWorkLog($dataInfo->id, 'popular_foods', $message);
 
                     DB::commit();
 
@@ -221,14 +221,14 @@
                 } else {
                     DB::rollBack();
 
-                    $message = "Failed To update Chef.";
+                    $message = "Failed To update Popular Food.";
                     return redirect()
                         ->back()
                         ->with('errorMessage', $message);
                 }
             } catch (Exception $err) {
                 DB::rollBack();
-                $this->storeSystemError('Backend', 'Chefcontroller', 'update', substr($err->getMessage(), 0, 1000));
+                $this->storeSystemError('Backend', 'BestSellingController', 'update', substr($err->getMessage(), 0, 1000));
                 DB::commit();
                 $message = "Server Errors Occur. Please Try Again.";
                 return redirect()
@@ -236,6 +236,19 @@
                     ->with('errorMessage', $message);
             }
         }
+
+
+        // private function handleImageUpload($image, $currentPhotoPath, $directory)
+        // {
+        //     $newPhotoPath = $this->imageUpload($image, $directory);
+        //     if ($currentPhotoPath) {
+        //         $path = storage_path('app/public/' . $currentPhotoPath);
+        //         if (file_exists($path)) {
+        //             unlink($path);
+        //         }
+        //     }
+        //     return $newPhotoPath;
+        // }
 
         public function destroy($id)
         {
@@ -244,9 +257,9 @@
 
             try {
 
-                if ($this->chefService->delete($id)) {
-                    $message = 'Chef deleted successfully';
-                    $this->storeAdminWorkLog($id, 'chefs', $message);
+                if ($this->bestsellingService->delete($id)) {
+                    $message = 'Popular Food deleted successfully';
+                    $this->storeAdminWorkLog($id, 'popular_foods', $message);
 
                     DB::commit();
 
@@ -256,14 +269,14 @@
                 } else {
                     DB::rollBack();
 
-                    $message = "Failed To Delete Chef.";
+                    $message = "Failed To Delete Popular Food.";
                     return redirect()
                         ->back()
                         ->with('errorMessage', $message);
                 }
             } catch (Exception $err) {
                 DB::rollBack();
-                $this->storeSystemError('Backend', 'Chefcontroller', 'destroy', substr($err->getMessage(), 0, 1000));
+                $this->storeSystemError('Backend', 'BestSellingController', 'destroy', substr($err->getMessage(), 0, 1000));
                 DB::commit();
                 $message = "Server Errors Occur. Please Try Again.";
                 return redirect()
@@ -277,11 +290,11 @@
         DB::beginTransaction();
 
         try {
-            $dataInfo = $this->chefService->changeStatus(request());
+            $dataInfo = $this->bestsellingService->changeStatus(request());
 
             if ($dataInfo->wasChanged()) {
-                $message = 'Chef ' . request()->status . ' Successfully';
-                $this->storeAdminWorkLog($dataInfo->id, 'chefs', $message);
+                $message = 'Popular Food ' . request()->status . ' Successfully';
+                $this->storeAdminWorkLog($dataInfo->id, 'popular_foods', $message);
 
                 DB::commit();
 
@@ -291,14 +304,14 @@
             } else {
                 DB::rollBack();
 
-                $message = "Failed To " . request()->status . " Chef.";
+                $message = "Failed To " . request()->status . " BestSelling.";
                 return redirect()
                     ->back()
                     ->with('errorMessage', $message);
             }
         } catch (Exception $err) {
             DB::rollBack();
-            $this->storeSystemError('Backend', 'ChefController', 'changeStatus', substr($err->getMessage(), 0, 1000));
+            $this->storeSystemError('Backend', 'BestSellingController', 'changeStatus', substr($err->getMessage(), 0, 1000));
             DB::commit();
             $message = "Server Errors Occur. Please Try Again.";
             return redirect()

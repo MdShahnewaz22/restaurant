@@ -8,16 +8,17 @@ import PrimaryButton from "@/Components/PrimaryButton.vue";
 import AlertMessage from "@/Components/AlertMessage.vue";
 import { displayResponse, displayWarning } from "@/responseMessage.js";
 
-const props = defineProps(["chef", "id"]);
+const props = defineProps(["bestselling", "id"]);
 
 const form = useForm({
-    image: props.chef?.image ?? "",
-    name: props.chef?.name ?? "",
-    designation: props.chef?.designation ?? "",
+    image: props.bestselling?.image ?? "",
+    name: props.bestselling?.name ?? "",
+    description: props.bestselling?.description ?? "",
+    price: props.bestselling?.price ?? "",
 
-    imagePreview: props.chef?.image ?? "",
-    filePreview: props.chef?.file ?? "",
-    _method: props.chef?.id ? "put" : "post",
+    imagePreview: props.bestselling?.image ?? "",
+    filePreview: props.bestselling?.file ?? "",
+    _method: props.bestselling?.id ? "put" : "post",
 });
 
 const handleimage = (event) => {
@@ -39,8 +40,8 @@ const handlefileChange = (event) => {
 
 const submit = () => {
     const routeName = props.id
-        ? route("backend.chef.update", props.id)
-        : route("backend.chef.store");
+        ? route("backend.bestselling.update", props.id)
+        : route("backend.bestselling.store");
     form.transform((data) => ({
         ...data,
         remember: "",
@@ -78,13 +79,12 @@ const submit = () => {
                 <div
                     class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4"
                 >
-
-                <div class="col-span-1 md:col-span-2">
+                    <div class="col-span-1 md:col-span-2">
                         <InputLabel for="image" value="Image" />
                         <div v-if="form.imagePreview">
                             <img
                                 :src="form.imagePreview"
-                                alt="Photo Preview"
+                                alt=" image"
                                 class="max-w-xs mt-2"
                                 height="60"
                                 width="60"
@@ -99,7 +99,6 @@ const submit = () => {
                         />
                         <InputError class="mt-2" :message="form.errors.image" />
                     </div>
-                    
                     <div class="col-span-1 md:col-span-2">
                         <InputLabel for="name" value="Name" />
                         <input
@@ -112,15 +111,29 @@ const submit = () => {
                         <InputError class="mt-2" :message="form.errors.name" />
                     </div>
                     <div class="col-span-1 md:col-span-2">
-                        <InputLabel for="designation" value="Designation" />
+                        <InputLabel for="description" value="Description" />
                         <input
-                            id="designation"
+                            id="description"
                             class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
-                            v-model="form.designation"
+                            v-model="form.description"
                             type="text"
-                            placeholder="Designation"
+                            placeholder="Description"
                         />
-                        <InputError class="mt-2" :message="form.errors.designation" />
+                        <InputError
+                            class="mt-2"
+                            :message="form.errors.description"
+                        />
+                    </div>
+                    <div class="col-span-1 md:col-span-2">
+                        <InputLabel for="price" value="Price" />
+                        <input
+                            id="price"
+                            class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
+                            v-model="form.price"
+                            type="text"
+                            placeholder="Price"
+                        />
+                        <InputError class="mt-2" :message="form.errors.price" />
                     </div>
                 </div>
                 <div class="flex items-center justify-end mt-4">

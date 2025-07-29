@@ -43,110 +43,21 @@
                                                     <li class="has-dropdown active menu-thumb">
                                                         <a href="{{route('frontend.home')}}">
                                                             {{translate('Home','হোম')}}
-                                                            <i class="fa-regular fa-plus"></i>
+                                                            <i class="fa-regular"></i>
                                                         </a>
-                                                        <ul class="submenu has-homemenu">
-                                                            <li>
-                                                                <div class="homemenu-items">
-                                                                    <div class="homemenu">
-                                                                        <div class="homemenu-thumb">
-                                                                            <img src="{{ asset('assets/frontend/assets/img/header/home1.jpg')}}"
-                                                                                alt="img">
-                                                                            <div class="demo-button">
-                                                                                <a href="index.html" class="theme-btn">
-                                                                                    Multi Page
-                                                                                </a>
-                                                                                <a href="index-one-page.html"
-                                                                                    class="theme-btn">
-                                                                                    One Page
-                                                                                </a>
-                                                                                <a href="index-dark.html"
-                                                                                    class="theme-btn">
-                                                                                    Dark Page
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="text-center homemenu-content">
-                                                                            <h4 class="homemenu-title">
-                                                                                Home 01
-                                                                            </h4>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="homemenu">
-                                                                        <div class="homemenu-thumb mb-15">
-                                                                            <img src="{{ asset('assets/frontend/assets/img/header/home2.jpg')}}"
-                                                                                alt="img">
-                                                                            <div class="demo-button">
-                                                                                <a href="index-2.html"
-                                                                                    class="theme-btn">
-                                                                                    Multi Page
-                                                                                </a>
-                                                                                <a href="index-two-page.html"
-                                                                                    class="theme-btn">
-                                                                                    One Page
-                                                                                </a>
-                                                                                <a href="index-2-dark.html"
-                                                                                    class="theme-btn">
-                                                                                    Dark Page
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="text-center homemenu-content">
-                                                                            <h4 class="homemenu-title">
-                                                                                Home 02
-                                                                            </h4>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="homemenu">
-                                                                        <div class="homemenu-thumb mb-15">
-                                                                            <img src="{{ asset('assets/frontend/assets/img/header/home3.jpg')}}"
-                                                                                alt="img">
-                                                                            <div class="demo-button">
-                                                                                <a href="index-3.html"
-                                                                                    class="theme-btn">
-                                                                                    Multi Page
-                                                                                </a>
-                                                                                <a href="index-three-page.html"
-                                                                                    class="theme-btn">
-                                                                                    One Page
-                                                                                </a>
-                                                                                <a href="index-3-dark.html"
-                                                                                    class="theme-btn">
-                                                                                    Dark Page
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="text-center homemenu-content">
-                                                                            <h4 class="homemenu-title">
-                                                                                Home 03
-                                                                            </h4>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
                                                     </li>
                                                     <li class="has-dropdown active d-xl-none">
                                                         <a href="index.html" class="border-none">
                                                             Home
                                                             <i class="fa-regular fa-plus"></i>
                                                         </a>
-                                                        <ul class="submenu">
-                                                            <li><a href="index.html">Home 01</a></li>
-                                                            <li><a href="index-2.html">Home 02</a></li>
-                                                            <li><a href="index-3.html">Home 03</a></li>
-                                                        </ul>
+
                                                     </li>
                                                     <li class="has-dropdown">
-                                                        <a href="about.html">
+                                                        <a href="{{route('frontend.aboutUs')}}">
                                                             {{translate('About Us','আমাদের সম্পর্কে')}}
-                                                            <i class="fa-regular fa-plus"></i>
+                                                            <i class="fa-regular"></i>
                                                         </a>
-                                                        <ul class="submenu">
-                                                            <li><a href="{{route('frontend.aboutUs1')}}">{{translate('About Us 01','আমাদের সম্পর্কে ০১')}}</a></li>
-                                                            <li><a href="{{route('frontend.aboutUs2')}}">{{translate('About Us 02','আমাদের সম্পর্কে ০২')}}</a>
-                                                            </li>
-                                                        </ul>
                                                     </li>
                                                     <li>
                                                         <a href="{{route('frontend.shop')}}">
@@ -155,10 +66,8 @@
                                                         </a>
                                                         <ul class="submenu">
                                                             <li><a href="{{route('frontend.shop')}}">{{translate('Shop','দোকান')}}</a></li>
-                                                            <li><a href="{{route('frontend.shop_right_sidebar')}}">{{translate('Shop Right Sidebar','ডান সাইডবারে কেনাকাটা করুন')}}</a>
-                                                            </li>
+                                                           
                                                             <li><a href="{{route('frontend.shop_list')}}">{{translate('Shop List','দোকানের তালিকা')}}</a></li>
-                                                            <li><a href="{{route('frontend.shop_list_right_sidebar')}}">{{translate('Shop List Right Sidebar','দোকানের তালিকার ডান সাইডবার')}}</a></li>
                                                             <li><a href="{{route('frontend.shop_details')}}">{{translate('Shop Details','দোকানের বিবরণ')}}</a></li>
                                                             <li><a href="{{route('frontend.cart')}}">{{translate('Cart List','কার্টের তালিকা')}}</a></li>
                                                             <li><a href="{{route('frontend.checkout')}}">{{translate('Checkout','চেকআউট')}}</a></li>
@@ -174,15 +83,8 @@
                                                             <li class="has-dropdown">
                                                                 <a href="{{route('frontend.chef')}}">
                                                                     Chef
-                                                                    <i class="fas fa-angle-down"></i>
+                                                                    <i class="fas"></i>
                                                                 </a>
-                                                                <ul class="submenu">
-                                                                    <li><a href="{{route('frontend.chef')}}">Chef</a></li>
-                                                                    <li><a href="chef-details.html">Chef Details 01</a>
-                                                                    </li>
-                                                                    <li><a href="chef-details2.html">Chef Details 02</a>
-                                                                    </li>
-                                                                </ul>
                                                             </li>
                                                             <li class="has-dropdown">
                                                                 <a href="menu.html">
@@ -223,20 +125,20 @@
                                                         <ul class="submenu">
                                                             <li><a href="{{route('frontend.blog')}}">Blog</a></li>
                                                             <li><a href="{{route('frontend.blog_standard')}}">Blog Standard</a></li>
-                                                            <li><a href="{{route('frontend.blog_left_sidebar')}}">Blog Left Sidebar</a>
-                                                            </li>
+                                                            {{-- <li><a href="{{route('frontend.blog_left_sidebar')}}">Blog Left Sidebar</a>
+                                                            </li> --}}
                                                             <li><a href="{{route('frontend.blog_details')}}">Blog Details</a></li>
                                                         </ul>
                                                     </li>
                                                     <li>
-                                                        <a href="contact.html">
+                                                        <a href="{{route('frontend.contact')}}">
                                                             {{translate('Contact Us','যোগাযোগ করুন')}}
-                                                            <i class="fa-regular fa-plus"></i>
+                                                            <i class="fa-regular"></i>
                                                         </a>
-                                                        <ul class="submenu">
+                                                        {{-- <ul class="submenu">
                                                             <li><a href="{{route('frontend.contact')}}">Contact Us 01</a></li>
                                                             <li><a href="{{route('frontend.contact2')}}">Contact Us 02</a></li>
-                                                        </ul>
+                                                        </ul> --}}
                                                     </li>
                                                 </ul>
                                             </nav>
@@ -294,7 +196,7 @@
                                                     <div class="header__right__dropdown__img">
                                                         <a href="#">
                                                             <img loading="lazy"
-                                                                src="{{ asset('assets/frontend')}}assets/img/blog/blogRecentThumb3_3.png"
+                                                                src="{{ asset('assets/frontend/assets/img/blog/blogRecentThumb3_3.png')}}"
                                                                 alt="photo">
                                                         </a>
                                                     </div>
@@ -313,8 +215,8 @@
                                             <p class="dropdown__price">Total: <span>$1,100.00</span>
                                             </p>
                                             <div class="header__right__dropdown__button">
-                                                <a href="cart.html" class="mb-2 theme-btn">View Cart</a>
-                                                <a href="checkout.html" class="theme-btn style3">Checkout</a>
+                                                <a href="{{ url('/cart')}}" class="mb-2 theme-btn">View Cart</a>
+                                                <a href="{{ url('/checkout') }}" class="theme-btn style3">Checkout</a>
                                             </div>
                                         </div>
                                     </div>

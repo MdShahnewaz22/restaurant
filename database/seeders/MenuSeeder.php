@@ -216,6 +216,37 @@ class MenuSeeder extends Seeder
     ],
 
     [
+        "name" => "Best Selling Manage",
+        "icon" => "aperture",
+        "route" => null,
+        "description" => null,
+        "sorting" => 1,
+        "permission_name" => "best-selling-management",
+        "status" => "Active",
+        "children" => [
+            [
+                "name" => "Best Selling Add",
+                "icon" => "plus-circle",
+                "route" => "backend.bestselling.create",
+                "description" => null,
+                "sorting" => 1,
+                "permission_name" => "role-add",
+                "status" => "Active",
+            ],
+            [
+                "name" => "Best Selling List",
+                "icon" => "list",
+                "route" => "backend.bestselling.index",
+                "description" => null,
+                "sorting" => 1,
+                "permission_name" => "role-list",
+                "status" => "Active",
+            ],
+        ],
+    ],
+
+
+    [
         "name" => "Chef Manage",
         "icon" => "aperture",
         "route" => null,
@@ -244,6 +275,8 @@ class MenuSeeder extends Seeder
             ],
         ],
     ],
+
+
 
     [
         'name' => 'Location Manager',

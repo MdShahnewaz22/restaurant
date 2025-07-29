@@ -652,7 +652,7 @@
                             <div class="social-profile">
                                 <span class="plus-btn"> <a href="#"> <i class="fa-regular fa-heart"></i></a></span>
                                 <ul>
-                                    <li><a href="cart.html"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
+                                    <li><a href="{{url('/cart')}}"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
                                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="fa-light fa-eye"></i></a></li>
                                 </ul>
@@ -662,7 +662,7 @@
                             <div class="social-profile">
                                 <span class="plus-btn"> <a href="#"> <i class="fa-regular fa-heart"></i></a></span>
                                 <ul>
-                                    <li><a href="cart.html"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
+                                    <li><a href="{{url('/cart')}}"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
                                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="fa-light fa-eye"></i></a></li>
                                 </ul>
@@ -670,7 +670,7 @@
                             <div class="dishes-thumb">
                                 <img src="{{ asset('assets/frontend/assets/img/dishes/dishes1_2.png') }}" alt="thmb">
                             </div>
-                            <a href="menu.html">
+                            <a href="{{url('/cart')}}">
                                 <h3>{{translate('Chinese Pasta','চাইনিজ পাস্তা')}}</h3>
                             </a>
                             <p>{{translate('The registration fee','রেজিস্ট্রেশন ফি')}}</p>
@@ -680,7 +680,7 @@
                             <div class="social-profile">
                                 <span class="plus-btn"> <a href="#"> <i class="fa-regular fa-heart"></i></a></span>
                                 <ul>
-                                    <li><a href="cart.html"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
+                                    <li><a href="{{url('/cart')}}"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
                                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="fa-light fa-eye"></i></a></li>
                                 </ul>
@@ -698,7 +698,7 @@
                             <div class="social-profile">
                                 <span class="plus-btn"> <a href="#"> <i class="fa-regular fa-heart"></i></a></span>
                                 <ul>
-                                    <li><a href="cart.html"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
+                                    <li><a href="{{url('/cart')}}"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
                                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="fa-light fa-eye"></i></a></li>
                                 </ul>
@@ -717,7 +717,7 @@
                                 <span class="plus-btn"> <a href="wishlist.html"> <i
                                             class="fa-regular fa-heart"></i></a></span>
                                 <ul>
-                                    <li><a href="cart.html"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
+                                    <li><a href="{{url('/cart')}}"><i class="fa-regular fa-basket-shopping-simple"></i></a></li>
                                     <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                                 class="fa-light fa-eye"></i></a></li>
                                 </ul>
@@ -802,7 +802,7 @@
                                                                     class="fa-solid fa-minus"></i></button>
                                                         </div>
                                                     </div>
-                                                    <a href="cart.html" class="theme-btn">Add to Cart<i
+                                                    <a href="{{url('/cart')}}" class="theme-btn">Add to Cart<i
                                                             class="text-white bg-transparent fa-regular fa-cart-shopping"></i></a>
                                                     <a href="wishlist.html" class="border-0 theme-btn style5">ADD TO
                                                         wishlist<i class="fa-sharp fa-solid fa-heart"></i></a>
@@ -1941,7 +1941,7 @@
                                                 <a href="blog-details.html">
                                                     <h3>{{translate('Fast Food Frenzy a Taste of Convenience','ফাস্ট ফুড উন্মাদনা, সুবিধার স্বাদ')}}</h3>
                                                 </a>
-                                                <a href="blog-details.html" class="link-btn">
+                                                <a href="{{ url('/blog_details')}}" class="link-btn">
                                                     <span>{{translate('Read More','আরও বিস্তারিত!')}}</span> <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
@@ -1973,7 +1973,7 @@
                                                 <a href="blog-details.html">
                                                     <h3>{{translate('Benefits of health and safety measures','স্বাস্থ্য ও নিরাপত্তা ব্যবস্থার সুবিধা')}}</h3>
                                                 </a>
-                                                <a href="blog-details.html" class="link-btn">
+                                                <a href="{{ url('/blog_details')}}" class="link-btn">
                                                     <span>{{translate('Read More','আরও বিস্তারিত!')}}</span> <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>
@@ -2005,7 +2005,7 @@
                                                 <a href="blog-details.html">
                                                     <h3>{{translate('Quick Cravings Unraveling Fast Food Delights','দ্রুত আকাঙ্ক্ষা ফাস্ট ফুডের আনন্দ উন্মোচন করে')}}</h3>
                                                 </a>
-                                                <a href="blog-details.html" class="link-btn">
+                                                <a href="{{ url('/blog_details')}}" class="link-btn">
                                                     <span>{{translate('Read More','আরও বিস্তারিত!')}}</span> <i class="fa-solid fa-arrow-right-long"></i>
                                                 </a>
                                             </div>

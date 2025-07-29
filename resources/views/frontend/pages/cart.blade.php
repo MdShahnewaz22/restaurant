@@ -364,7 +364,7 @@
                         </tfoot>
                     </table>
                     <div class="mt-3 wc-proceed-to-checkout">
-                        <a href="checkout.html" class="theme-btn btn-fw">Proceed to checkout</a>
+                        <a href="{{url('/checkout')}}" class="theme-btn btn-fw">Proceed to checkout</a>
                     </div>
                 </div>
             </div>

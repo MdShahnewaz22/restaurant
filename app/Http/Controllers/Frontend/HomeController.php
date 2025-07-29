@@ -17,15 +17,10 @@ class HomeController extends Controller
         return view('frontend.home');
     }
 
-    public function aboutUs1()
+    public function aboutUs()
     {
 
-        return view('frontend.pages.about_us1');
-    }
-    public function aboutUs2()
-    {
-
-        return view('frontend.pages.about_us2');
+        return view('frontend.pages.about_us');
     }
 
     public function shop()
@@ -52,27 +47,16 @@ class HomeController extends Controller
         return view('frontend.pages.wishlist');
     }
 
-    public function shop_right_sidebar()
-    {
-        return view('frontend.pages.shop_right_sidebar');
-    }
+
 
     public function shop_list()
     {
         return view('frontend.pages.shop_list');
     }
 
-    public function shop_list_right_sidebar()
-    {
-        return view('frontend.pages.shop_list_right_sidebar');
-    }
     public function contact()
     {
         return view('frontend.pages.contact');
-    }
-    public function contact2()
-    {
-        return view('frontend.pages.contact2');
     }
     public function gallery()
     {
@@ -89,10 +73,6 @@ class HomeController extends Controller
     public function blog_standard()
     {
         return view('frontend.pages.blog_standard');
-    }
-    public function blog_left_sidebar()
-    {
-        return view('frontend.pages.blog_left_sidebar');
     }
     public function chef()
     {

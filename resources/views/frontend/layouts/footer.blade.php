@@ -15,7 +15,7 @@
                             <div class="item1"><i class="fa-solid fa-location-dot"></i></div>
                             <div class="item2">
                                 <h6>address</h6>
-                                <p>4648 Rocky Road Philadelphia </p>
+                                <p>Dhaka,Bangladesh </p>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <div class="item1"><i class="fa-regular fa-phone-volume"></i></div>
                             <div class="item2">
                                 <h6>call emergency</h6>
-                                <p>+88 0123 654 99</p>
+                                <p>+88 01785915418</p>
                             </div>
                         </div>
                     </div>
@@ -70,13 +70,13 @@
                         </div>
                         <ul class="list-area">
                             <li>
-                                <a href="about.html">
+                                <a href="{{url('/about-us')}}">
                                     <i class="fa-solid fa-chevrons-right"></i>
                                     About Us
                                 </a>
                             </li>
                             <li>
-                                <a href="gallery.html">
+                                <a href="{{url('/gallery')}}">
                                     <i class="fa-solid fa-chevrons-right"></i>
                                     Our Gallery
                                 </a>
