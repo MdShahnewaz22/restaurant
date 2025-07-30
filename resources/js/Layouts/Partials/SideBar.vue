@@ -42,7 +42,7 @@ const sideNavListFalse = ref('md:hidden lg:block');
 <template>
     <div :class="{ ' hidden w-[60px] sm:w-[60px] md:w-[60px]': sideBar, 'block w-[260px] sm:w-[60px] lg:w-[260px]': !sideBar }" class="bg-slate-50 dark:bg-slate-900 text-slate-800 md:block hover:w-[260px] relative">
         <div class="w-full flex items-center h-[50px] border-b border-black dark:border-slate-800">
-            <h1 class="hidden px-3 text-2xl font-bold md:block">BTRC </h1>
+            <h1 class="hidden px-3 text-2xl font-bold md:block">Restaurant</h1>
         </div>
 
         <div style="width: inherit;"

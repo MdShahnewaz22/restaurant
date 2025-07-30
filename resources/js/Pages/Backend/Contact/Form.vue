@@ -13,6 +13,8 @@ const props = defineProps(["contact", "id"]);
 const form = useForm({
   name: props.contact?.name ?? '',
   gmail: props.contact?.gmail ?? '',
+  number: props.contact?.number ?? '',
+  subject: props.contact?.subject ?? '',
   massage: props.contact?.massage ?? '',
 
   imagePreview: props.contact?.image ?? "",
@@ -70,6 +72,31 @@ const submit = () => {
           <h1 class="p-4 text-xl font-bold dark:text-white">{{ $page.props.pageTitle }}</h1>
         </div>
         <div class="p-4 py-2">
+          <h1 class="py-2 text-xl font-bold dark:text-white">
+            <a
+              href="/backend/contact"
+              class="inline-flex items-center px-4 py-2 bg-[#00008bfa] border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:[#00008bfa] active:bg-[#00008bd8] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 ms-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="14"
+                class="main-grid-item-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <line x1="21" x2="3" y1="10" y2="10" />
+                <line x1="21" x2="3" y1="6" y2="6" />
+                <line x1="21" x2="3" y1="14" y2="14" />
+                <line x1="21" x2="3" y1="18" y2="18" />
+              </svg>
+              List
+            </a>
+          </h1>
         </div>
       </div>
 
@@ -90,6 +117,24 @@ const submit = () => {
               v-model="form.gmail" type="email" placeholder="Gmail" />
             <InputError class="mt-2" :message="form.errors.gmail" />
           </div>
+
+          <div class="col-span-1 md:col-span-2">
+             <InputLabel for="number" value="Phone Number"/>   
+              <input id="number"
+              class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
+              v-model="form.number" type="text" placeholder="Phone Number"> 
+             <InputError class="mt-2" :message="form.errors.number" />
+          </div>
+
+          <div class="col-span-1 md:col-span-2">
+            <InputLabel for="subject" value="Subject" />
+            <input id="subject"
+              class="block w-full p-2 text-sm rounded-md shadow-sm border-slate-300 dark:border-slate-500 dark:bg-slate-700 dark:text-slate-200 focus:border-indigo-300 dark:focus:border-slate-600"
+              v-model="form.subject" type="text" placeholder="Subject" />
+            <InputError class="mt-2" :message="form.errors.subject" />
+          </div>
+
+
           <div class="col-span-1 md:col-span-2">
             <InputLabel for="massage" value="Massage" />
             <input id="massage"

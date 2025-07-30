@@ -46,6 +46,8 @@
             ['fieldName' => 'index', 'class' => 'text-center'],
             ['fieldName' => 'name', 'class' => 'text-center'],
 			['fieldName' => 'gmail', 'class' => 'text-center'],
+            ['fieldName' => 'number', 'class' => 'text-center'],
+            ['fieldName' => 'subject', 'class' => 'text-center'],
 			['fieldName' => 'massage', 'class' => 'text-center'],
             ['fieldName' => 'status', 'class' => 'text-center'],
         ];
@@ -56,6 +58,8 @@
             'Sl/No',
             'Name',
 			'Gmail',
+            'Phone Number',
+            'subject',
 			'Massage',
             'Status',
             'Action'
@@ -83,6 +87,8 @@
 
             $customData->name = $data->name;
 			$customData->gmail = $data->gmail;
+            $customData->number =$data->number;
+            $customData->subject = $data->subject;
 			$customData->massage = $data->massage;
 			
 

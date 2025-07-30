@@ -19,6 +19,8 @@ class ContactRequest extends FormRequest
                 return [
                     'name' => 'required|string',
 					'gmail' => 'required|string',
+					'number' => 'required|string',
+                    'subject' => 'required|string',
 					'massage' => 'required|string'
                 ];
                 break;
@@ -28,6 +30,8 @@ class ContactRequest extends FormRequest
                 return [
                     'name' => 'required|string',
 					'gmail' => 'required|string',
+                    'number' => 'required|string',
+                    'subject' => 'required|string',
 					'massage' => 'required|string'
                 ];
                 break;
@@ -39,6 +43,8 @@ class ContactRequest extends FormRequest
         return [
             'name.required' => 'The name field is required.',
  			'gmail.required' => 'The gmail field is required.',
+ 			'number.required' => 'The number field is required.',
+ 			'subject.required' => 'The subject field is required.',
  			'massage.required' => 'The massage field is required.',
  			
 
