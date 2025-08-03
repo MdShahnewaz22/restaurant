@@ -26,7 +26,43 @@ const applyFilter = () => {
         <div
             class="w-full p-4 mt-3 duration-1000 ease-in-out bg-white rounded-md shadow-md shadow-gray-800/50 dark:bg-slate-900">
 
-            <h1 class="py-2 text-xl font-bold dark:text-white">{{ $page.props.pageTitle }}</h1>
+            <!-- <h1 class="py-2 text-xl font-bold dark:text-white">{{ $page.props.pageTitle }}</h1> -->
+
+            <div class="flex justify-between">
+        <h1 class="py-2 text-xl font-bold dark:text-white">
+          {{ $page.props.pageTitle }}
+        </h1>
+
+        <div class="p-4 py-2">
+          <h1 class="py-2 text-xl font-bold dark:text-white">
+            <a
+              href="/backend/popularfood/create"
+              class="inline-flex items-center px-4 py-2 bg-[#000] border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150 ms-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="14"
+                height="14"
+                class="main-grid-item-icon"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              >
+                <line x1="12" x2="12" y1="5" y2="19" />
+                <line x1="5" x2="19" y1="12" y2="12" />
+              </svg>
+              Create
+            </a>
+          </h1>
+        </div>
+      </div>
+
+
+
+
 
             <div
                 class="flex justify-between w-full p-2 py-3 space-x-2 text-gray-700 rounded-md shadow-md bg-slate-300 shadow-gray-800/50 dark:bg-gray-700 dark:text-gray-200">

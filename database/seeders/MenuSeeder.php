@@ -157,7 +157,7 @@ class MenuSeeder extends Seeder
 
     [
         "name" => "Contact Manage",
-        "icon" => "aperture",
+        "icon" => "message-square",
         "route" => null,
         "description" => null,
         "sorting" => 1,

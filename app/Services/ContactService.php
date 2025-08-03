@@ -20,7 +20,7 @@ class ContactService
 
     public function all()
     {
-        return $this->contactModel->whereNull('deleted_at')->all();
+        return $this->contactModel->whereNull('deleted_at')->get();
     }
 
     public function find($id)

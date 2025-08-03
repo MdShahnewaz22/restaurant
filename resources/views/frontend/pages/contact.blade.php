@@ -2,6 +2,26 @@
 @section('main-content')
  @include('frontend.layouts.menu')
 
+ {{-- success massege  --}}
+@if(session('success'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success!',
+                text: '{{ session('success') }}',
+                timer: 4000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                position: 'center'
+            });
+        });
+    </script>
+@endif
+
+ {{-- success massege end   --}}
+
 
  <body class="bg-color2">
 
@@ -206,18 +226,20 @@
                     <div class="col-xl-6">
                         <div class="contact-form style2">
                             <h2>Get in Touch</h2>
-                            <form class="row" action="#">
+                            
+                            <form class="row" action="{{ route('frontend.contactstore') }}" method="post">
+                                 @csrf
                                 <div class="col-md-6">
-                                    <input type="text" placeholder="Full Name">
+                                    <input type="text" name="name" placeholder="Full Name">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" placeholder="Email Address">
+                                    <input type="email" name="gmail" placeholder="Email Address">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="number" placeholder="Phone Number">
+                                    <input type="number" name="number" placeholder="Phone Number">
                                 </div>
                                 <div class="col-md-6">
-                                    <select name="orderby" class="single-select" aria-label="Shop order">
+                                    <select name="subject" class="single-select" aria-label="Shop order">
                                         <option value="subject" selected="selected">Subject</option>
                                         <option value="complain">Complain</option>
                                         <option value="greetings">Greetings</option>
@@ -227,7 +249,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea id="message" class="form-control" placeholder="Write your message here..."
+                                    <textarea id="message" class="form-control" name="massage" placeholder="Write your message here..."
                                         rows="5"></textarea>
                                 </div>
                                 <div class="col-12 form-group">
@@ -236,8 +258,14 @@
                                         evolve user<span class="checkmark"></span></label>
                                 </div>
                                 <div class="mb-0 col-12 form-group">
-                                    <button class="theme-btn w-100">SUBMIT NOW <i
+
+                                    <button type="submit" class="theme-btn w-100">SUBMIT NOW <i
                                             class="text-white bg-transparent fa-sharp fa-regular fa-arrow-right-long"></i></button>
+
+                                    {{-- <a href="{{ url('/contact') }}">
+                                        <button class="theme-btn w-100">SUBMIT NOW <i
+                                            class="text-white bg-transparent fa-sharp fa-regular fa-arrow-right-long"></i></button>
+                                    </a> --}}
                                 </div>
                             </form>
                         </div>

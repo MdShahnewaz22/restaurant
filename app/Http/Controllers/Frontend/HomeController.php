@@ -3,14 +3,19 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-
+use App\Services\ContactService;
+use Illuminate\Http\Request;
+use App\Models\Contact;
 use Inertia\Inertia;
 use Exception;
 
 class HomeController extends Controller
 {
+    protected $contactService;
 
-    public function __construct() {}
+    public function __construct(ContactService $contactService) {
+         $this->contactService = $contactService;
+    }
 
     public function index()
     {
@@ -56,6 +61,7 @@ class HomeController extends Controller
 
     public function contact()
     {
+        $contact = $this->contactService->all();
         return view('frontend.pages.contact');
     }
     public function gallery()
@@ -92,4 +98,29 @@ class HomeController extends Controller
         session()->put('locale', $lang);
         return redirect()->back();
     }
+
+    public function contactstore(Request $request)
+    {
+        // ✅ Validate input
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'gmail' => 'required|email',
+            'number' => 'required|string|max:20',
+            'subject' => 'required|string',
+            'massage' => 'required|string',
+        ]);
+
+        // ✅ Save to database
+        Contact::create([
+            'name' => $request->name,
+            'gmail' => $request->gmail,
+            'number' => $request->number,
+            'subject' => $request->subject,
+            'massage' => $request->massage,
+        ]);
+
+        // ✅ Redirect back with message
+        return redirect()->back()->with('success', 'Your message has been submitted!');
+    }
 }
+

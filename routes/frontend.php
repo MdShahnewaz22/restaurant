@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +40,8 @@ Route::get('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 Route::get('/wishlist', [HomeController::class, 'wishlist'])->name('wishlist');
 Route::get('/shop_list', [HomeController::class, 'shop_list'])->name('shop_list');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/contactdata', [HomeController::class, 'contactstore'])->name('contactstore');
+
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/blog_details', [HomeController::class, 'blog_details'])->name('blog_details');
@@ -47,3 +51,4 @@ Route::get('/faq', [HomeController::class, 'faq'])->name('faq');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 
 Route::get('lang/{lang}', [HomeController::class, 'languageSet'])->name('languageSet');
+
