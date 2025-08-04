@@ -38,9 +38,9 @@ const submit = () => {
     <Head title="Log in" />
 
     <AuthenticationCard>
-        <template #logo>
+        <!-- <template #logo>
             <AuthenticationCardLogo />
-        </template>
+        </template> -->
 
         <div v-if="errorMessage" class="mb-4 text-sm font-medium text-red-600">
             {{ errorMessage }}
